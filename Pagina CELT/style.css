@@ -1,0 +1,21 @@
+#publicacion1, #publicacion2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  a {
+    display: block;
+    margin-top: 10px;
+  }
+  
