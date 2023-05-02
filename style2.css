@@ -34,6 +34,12 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+    text-align: start;
+  }
+
+  .logo img{
+    width: 5%;
+    height: 5%;
   }
   
   nav ul {
@@ -66,7 +72,7 @@ body {
   }
   
   #Saludo h1 {
-    font-size: 36px;
+    font-size: 2rem;
     margin-bottom: 5px;
     text-align: center;
   }
@@ -90,7 +96,7 @@ body {
   }
   
   #DescargarLibros h2  {
-    font-size: 24px;
+    
     margin-bottom: 20px;
   }
   
@@ -163,12 +169,22 @@ body {
     #Saludo {
       padding: 10px;
     }
+
+    #Saludo h1{
+      font-size: 1.2rem;
+    }
+
+    #container{
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+    }
     
     #DescargarLibros, #DescargarTarjetas {
       padding: 20px;
     }
     
-    #DescargarLibros h2  {
+    #DescargarLibros h2,  #DescargarTarjetas h2 {
       font-size: 20px;
       margin-bottom: 10px;
     }
