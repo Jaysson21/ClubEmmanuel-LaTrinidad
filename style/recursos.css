@@ -1,0 +1,145 @@
+
+
+/* Main Styles */
+#Saludo {
+  
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#Saludo h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.saludoLogoClub {
+  width: 250px;
+  margin-top: 5px;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#DescargarLibros, #DescargarTarjetas {
+  flex-direction: column;
+  padding: 40px;
+  
+  
+}
+
+#DescargarLibros h2  {
+  
+  margin-bottom: 20px;
+}
+
+.libroDescarga {
+  font-size: 24px;
+  color: #0072c6;
+  margin-bottom: 20px;
+}
+
+.libroDescarga:hover {
+  color: #333;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+
+  /* Header Styles */
+  header {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Main Styles */
+  #Saludo {
+    padding: 10px;
+  }
+
+  #Saludo h1 {
+    font-size: 1.2rem;
+  }
+
+  .saludoLogoClub {
+    width: 50%;
+    margin-top: 5px;
+  }
+
+  #container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  #DescargarLibros,
+  #DescargarTarjetas {
+    padding: 20px;
+    
+  }
+
+  #DescargarLibros h2,
+  #DescargarTarjetas h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .libroDescarga {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+
+
+  /* Footer Styles */
+  footer {
+    padding: 30px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-social a {
+    margin-right: 10px;
+    padding-right: 0;
+  }
+
+  .footer-info p {
+    padding-left: 0;
+  }
+}
+
+
+/* Colors */
+/* Azul: #0072c6 */
+/* Rojo: #dc3545 */
+/* Verde: #28a745 */
+/* Gris: #ccc */
+/* Amarillo: #ffc107 */
+
+/*AQUI EMPIEZA A DARLE ESTILOS AL INICIO */
+
+.img-figure img {
+  width: 100%;
+}

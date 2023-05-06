@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 85%;
+    margin: 0 auto;
+
+    background-image: url('/assets/Images/Fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-weight: normal;
+}
+
+/* Header Styles */
+header {
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff9f;
+
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.logo img {
+    width: 10%;
+    height: 10%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav a:hover {
+    color: #0072c6;
+}
+
+.burger {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333333c7;
+    color: #fff;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social a {
+    font-size: 24px;
+    margin-right: 20px;
+    color: #fff;
+    padding-right: 20px;
+}
+
+.footer-address p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+/*************** Estilos para dispositivos móviles **************************************************************************************/
+@media screen and (max-width: 600px) {
+
+    body {
+        width: 100%;
+
+        background-image: url('/assets/Images/Fondo2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+
+    /** Barra de navegacion **/
+    .nav-links {
+        position: fixed;
+        background-color: #0073c6a6;
+        height: 100vh;
+        width: 30%;
+        flex-direction: column;
+        top: 6.8%;
+        left: 100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        padding-top: 8px;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+        transition: all 0.5s ease;
+        
+    }
+
+    .nav-active {
+        opacity: 1;
+        left: 70%;
+        z-index: 1;
+    }
+
+    .nav-links li {
+        opacity: 1;
+    }
+
+    /** Barra de navegacion **/
+
+    .logo a{
+        font-size: 0;
+    }
+
+    .logo img{
+        width: 10%;
+        height: 10%;
+    }
+}
