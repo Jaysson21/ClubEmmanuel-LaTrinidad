@@ -6,7 +6,7 @@ body {
     width: 85%;
     margin: 0 auto;
 
-    background-image: url('/assets/Images/Fondo.jpg');
+    background-image: url('assets/Images/Fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -118,8 +118,7 @@ footer {
 
     body {
         width: 100%;
-
-        background-image: url('/assets/Images/Fondo2.jpg');
+        background-image: url('assets/Images/Fondo2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
