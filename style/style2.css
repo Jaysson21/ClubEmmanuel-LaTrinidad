@@ -223,4 +223,9 @@ body {
   /* Verde: #28a745 */
   /* Gris: #ccc */
   /* Amarillo: #ffc107 */
-  
+
+  /*AQUI EMPIEZA A DARLE ESTILOS AL INICIO */
+
+  .img-figure img{
+    width: 100%;
+  }
