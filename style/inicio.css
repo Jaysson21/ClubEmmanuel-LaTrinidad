@@ -1,100 +1,141 @@
-.img-figure img{
-    width: 100%;
-}
-
-.main-section{
-    top: 800px;
+.main-section {
     display: flex;
-    padding: 0 10px;
     align-items: center;
     justify-content: center;
-    background: rosybrown;
-    
+
 }
 
-.descripcion{
+.descripcion {
+    width: 40%;
+    padding: 10px 0px 10px 10px;
+}
+
+.descripcion p,
+h2 {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    align-items: center;
+}
+
+.wrapper {
+    padding: 10px 10px 10px 10px;
+    display: flex;
     width: 50%;
+    position: relative;
 }
 
-.wrapper{
-    width: 50%;
-    position: relative;  
-    
-}
-
-.wrapper i{
+.wrapper i {
     top: 50%;
-    height: 46px;
-    width: 46px;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
     cursor: pointer;
+    font-size: 1.15rem;
     position: absolute;
-    font-size: 1.2rem;
     text-align: center;
-    line-height: 46px;
+    line-height: 44px;
     background: #fff;
     border-radius: 50%;
     transform: translateY(-50%);
+    transition: transform 0.1s linear;
 }
 
-.wrapper i:first-child{
-    left: -23px;
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
 }
 
-.wrapper i:last-child{
-    right: -23px;
+.wrapper i:hover {
+    background: #f2f2f2;
 }
 
-.wrapper .carousel{
+.wrapper i:first-child {
+    left: -0px;
+    display: none;
+}
+
+.wrapper i:last-child {
+    right: -0px;
+}
+
+.wrapper .carousel {
     font-size: 0px;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
+    scroll-behavior: smooth;
 }
 
-.carousel img{
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
     height: 340px;
     object-fit: cover;
+    user-select: none;
     margin-left: 14px;
     width: calc(100% / 2);
 }
 
-.carousel img:first-child{
+.carousel img:first-child {
     margin-left: 0px;
 }
 
-/* Aqui empieza los estilos para los botones */
-.button-section .button-serv{
+/********************* Aqui empieza los estilos para los botones *****************************/
+.button-section .button-serv {
     display: flex;
     flex-direction: column;
     height: 200px;
-    width: 200px;
+    width: 50%;
+    margin: 0 auto;
 }
 
-
-/* Empieza la parte responsive */
-
-@media screen and (max-width : 900px){
-    .carousel img{
-        width: calc(100% / 2);
-    }
+.button-section .button-serv button {
+    border: 1px solid #0d6dfdbb;
+    background-color: #0d6dfdbb;
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    height: 35px;
     
 }
 
-@media screen and (max-width : 550px){
-    .carousel img{
+.button-serv a{
+    color: white;
+}
+
+.button-section .button-serv button:hover {
+    background-color: #0B5ED7;
+    border: 2px solid #0B5ED7;
+}
+
+
+/***************** Empieza la parte responsive *********************/
+
+@media screen and (max-width : 550px) {
+    .carousel img {
         width: 100%;
     }
 
-    .main-section{
+    .main-section {
         flex-direction: column;
     }
 
-    .descripcion{
-        width: 100%;
+    .descripcion {
+        width: 90%;
     }
 
-    .wrapper{
-        width: 100%;
+    .wrapper {
+        width: 90%;
     }
-    
+
+    .button-section .button-serv{
+        width: 90%;
+    }
+
 }

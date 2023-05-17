@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway';
     margin: 0;
     padding: 0;
     width: 85%;
@@ -11,7 +11,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-    box-shadow: rgba(81, 78, 87, 0.932) 0px 0px 20px;
 
 }
 
@@ -119,7 +118,7 @@ footer {
 @media screen and (max-width: 600px) {
 
     body {
-        width: 100%;
+        width: 100vh;
         background-image: url('Fondo2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -196,6 +195,7 @@ footer {
     /* Footer Styles */
   footer {
     padding: 30px;
+    width: 100%;
   }
 
   .footer-container {
