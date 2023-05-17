@@ -63,6 +63,7 @@ h2 {
     overflow: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
+    border-radius: 5%;
 }
 
 .carousel.dragging {
@@ -75,7 +76,7 @@ h2 {
 }
 
 .carousel img {
-    height: 340px;
+    height: 380px;
     object-fit: cover;
     user-select: none;
     margin-left: 14px;
