@@ -25,25 +25,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-#DescargarLibros, #DescargarTarjetas {
+#DescargarLibros, #DescargarTarjetas, #DescargarLibrosAvent, #DescargarTarjetasAvent {
   flex-direction: column;
   padding: 40px;
 }
 
-#DescargarLibros h2  {
+#DescargarLibros h3, #DescargarLibrosAvent h3 {
   margin-bottom: 20px;
 }
 
 .libroDescarga {
   font-size: 24px;
-  color: #0072c6;
+  color: white;
   margin-bottom: 20px;
 }
 
 .libroDescarga:hover {
   color: #333;
+}
+
+#DescargarLibrosAvent #Aventureros-section, #DescargarLibros .conquistadores-section {
+  display: flex;
+  align-items: center;
+}
+
+#DescargarLibrosAvent #Aventureros-section img, 
+#DescargarLibros .conquistadores-section img {
+  padding-right: 10px;
 }
 
 /* Estilos para dispositivos móviles ***********************************************/
@@ -70,13 +81,15 @@
   }
 
   #DescargarLibros,
-  #DescargarTarjetas {
+  #DescargarTarjetas, #DescargarLibrosAvent, #DescargarTarjetasAvent {
     padding: 20px;
     
   }
 
-  #DescargarLibros h2,
-  #DescargarTarjetas h2 {
+  #DescargarLibros h3,
+  #DescargarTarjetas h3,
+  #DescargarLibrosAvent h3,
+  #DescargarTarjetasAvent h3 {
     font-size: 20px;
     margin-bottom: 10px;
   }
@@ -102,6 +115,3 @@
 
 /*AQUI EMPIEZA A DARLE ESTILOS AL INICIO */
 
-.img-figure img {
-  width: 100%;
-}

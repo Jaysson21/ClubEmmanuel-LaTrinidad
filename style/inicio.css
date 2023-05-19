@@ -8,13 +8,18 @@
 .descripcion {
     width: 40%;
     padding: 10px 0px 10px 10px;
+    background-color: #95b2dd71;
+    border-radius: 2%;
 }
 
 .descripcion p,
-h2 {
+h2, .p-final {
     color: rgb(0, 0, 0);
-    text-align: justify;
-    align-items: center;
+    text-align: center;
+}
+
+.descripcion p, .p-final{
+    font-size: 1.2rem;
 }
 
 .wrapper {
@@ -63,7 +68,6 @@ h2 {
     overflow: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
-    border-radius: 5%;
 }
 
 .carousel.dragging {
@@ -81,6 +85,7 @@ h2 {
     user-select: none;
     margin-left: 14px;
     width: calc(100% / 2);
+    border-radius: 5%;
 }
 
 .carousel img:first-child {
@@ -91,18 +96,23 @@ h2 {
 .button-section .button-serv {
     display: flex;
     flex-direction: column;
-    height: 200px;
     width: 50%;
     margin: 0 auto;
 }
 
-.button-section .button-serv button {
+.button-section .button-serv a{
     border: 1px solid #0d6dfdbb;
     background-color: #0d6dfdbb;
     margin-top: 10px;
     font-size: 1rem;
     cursor: pointer;
     height: 35px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     
 }
 
@@ -110,7 +120,7 @@ h2 {
     color: white;
 }
 
-.button-section .button-serv button:hover {
+.button-section .button-serv a:hover {
     background-color: #0B5ED7;
     border: 2px solid #0B5ED7;
 }
@@ -136,7 +146,7 @@ h2 {
     }
 
     .button-section .button-serv{
-        width: 90%;
+        width: 95%;
     }
 
 }
