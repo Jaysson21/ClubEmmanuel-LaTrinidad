@@ -44,7 +44,7 @@
 }
 
 .libroDescarga:hover {
-  color: #333;
+  color: rgb(0, 102, 255);
 }
 
 #DescargarLibrosAvent #Aventureros-section, #DescargarLibros .conquistadores-section {
@@ -66,6 +66,7 @@
 
   #Saludo h1 {
     font-size: 1.2rem;
+    color: black;
   }
 
   .saludoLogoClub {
