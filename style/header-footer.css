@@ -122,7 +122,7 @@ footer {
         width: 100%;
         background-image: url('Fondo2.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
         background-attachment: fixed;
         background-position: center center;
 
