@@ -59,6 +59,7 @@
 
 /* Estilos para dispositivos móviles ***********************************************/
 @media only screen and (max-width: 600px) {
+  
   /* Main Styles */
   #Saludo {
     padding: 10px;
@@ -78,12 +79,13 @@
     display: inline-block;
     justify-content: center;
     align-items: center;
+    width: 100%;
     
   }
 
   #DescargarLibros,
   #DescargarTarjetas, #DescargarLibrosAvent, #DescargarTarjetasAvent {
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     
   }
 
@@ -100,9 +102,6 @@
     margin-bottom: 10px;
     color: white;
   }
-
-
-
   
 }
 
