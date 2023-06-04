@@ -1,6 +1,6 @@
 
 /* Main Styles */
-#Saludo {
+#Saludo { 
   
   color: #fff;
   display: flex;
@@ -22,16 +22,52 @@
 }
 
 #container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  /* flex-wrap: wrap; */
+}
+
+/*Comentario*/
+#container .conquistadores-section,
+#container .section-title-aventureros {
+  width: 100%;
+}
+
+.conquistadores-section div,
+.section-title-aventureros div {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 25px;
 }
 
-#DescargarLibros, #DescargarTarjetas, #DescargarLibrosAvent, #DescargarTarjetasAvent {
-  flex-direction: column;
-  padding: 40px;
+.conquistadores-section div h2,
+.section-title-aventureros div h2{
+  font-size: 28px;
 }
+
+.containerSectionConquistadores,
+.section-aventureros {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.containerSectionConquistadores div,
+.section-aventureros div {
+  width: 40%;
+  padding: 0 20px;
+}
+
+/* #DescargarLibros, #DescargarTarjetas {
+  width: 50%;
+  padding: 40px;
+} */
 
 #DescargarLibros h3, #DescargarLibrosAvent h3 {
   margin-bottom: 20px;
