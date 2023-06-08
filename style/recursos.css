@@ -42,7 +42,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
+  padding-left: 10px;
 }
 
 .conquistadores-section div h2,
@@ -112,12 +113,32 @@
   }
 
   #container {
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    
+    width: 98%;
   }
+
+.containerSectionConquistadores .Descargar,
+.section-aventureros .Descargar {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.containerSectionConquistadores, .section-aventureros{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.conquistadores-section div h2, .section-title-aventureros div h2{
+  font-size: 1.5rem;
+}
+
+#container .conquistadores-section,
+#container .section-title-aventureros {
+  width: 95%;
+}
 
   #DescargarLibros,
   #DescargarTarjetas, #DescargarLibrosAvent, #DescargarTarjetasAvent {
@@ -125,12 +146,9 @@
     
   }
 
-  #DescargarLibros h3,
-  #DescargarTarjetas h3,
-  #DescargarLibrosAvent h3,
-  #DescargarTarjetasAvent h3 {
+  .Descargar h3{
     font-size: 20px;
-    margin-bottom: 10px;
+    padding-left: 20px;
   }
 
   .libroDescarga {
