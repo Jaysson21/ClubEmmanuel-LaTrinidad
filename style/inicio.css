@@ -128,7 +128,7 @@ h2, .p-final {
 
 /***************** Empieza la parte responsive *********************/
 
-@media screen and (max-width : 550px) {
+@media screen and (max-width : 600px) {
     .carousel img {
         width: 100%;
     }
