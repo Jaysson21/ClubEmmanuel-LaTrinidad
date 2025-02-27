@@ -10,6 +10,21 @@ body {
     background-color: #f1f8ff;
 }
 
+.imagen-lista {
+    height: auto; /* Mantiene la proporción */
+    width: 25px; /* Ajusta esto según tus necesidades */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-right: 5px; /* Añade un pequeño espacio entre el texto y la imagen */
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a ambos extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+
+
 .nav-tabs .nav-link {
     color: #495057;
 }
