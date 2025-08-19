@@ -1,170 +1,69 @@
+body { background: linear-gradient(180deg, #0f172a 0%, #0b1224 100%); color: #e5e7eb; }
+.card { background:#111827; color:#e5e7eb; border:1px solid rgba(255,255,255,.06); }
+.card-header { background: rgba(251,191,36,.10); border-bottom:1px solid rgba(255,255,255,.08); }
+.list-group-item { background:#0f172a; color:#e5e7eb; border-color: rgba(255,255,255,.08); }
+.nav-tabs .nav-link { color:#e5e7eb; }
+.nav-tabs .nav-link.active { color:#111827; background:#fbbf24; border-color:#fbbf24; }
+.btn-primary { background:#fbbf24; border-color:#fbbf24; color:#111827; font-weight:600; }
+.btn-primary:hover { filter:brightness(1.05); }
 
-/* Main Styles */
-#Saludo { 
-  
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+
+body {
+    background-color: #f8f9fa;
 }
 
-#Saludo h1 {
-  font-size: 2rem;
-  margin-bottom: 5px;
-  text-align: center;
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.saludoLogoClub {
-  width: 250px;
-  margin-top: 5px;
+.card-header {
+    background-color: #f1f8ff;
 }
 
-#container{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  /* flex-wrap: wrap; */
+.imagen-lista {
+    height: auto; /* Mantiene la proporción */
+    width: 25px; /* Ajusta esto según tus necesidades */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-right: 5px; /* Añade un pequeño espacio entre el texto y la imagen */
 }
 
-/*Comentario*/
-#container .conquistadores-section,
-#container .section-title-aventureros {
-  width: 100%;
-}
-
-.conquistadores-section div,
-.section-title-aventureros div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding-left: 10px;
-}
-
-.conquistadores-section div h2,
-.section-title-aventureros div h2{
-  font-size: 28px;
-}
-
-.containerSectionConquistadores,
-.section-aventureros {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.containerSectionConquistadores div,
-.section-aventureros div {
-  width: 40%;
-  padding: 0 20px;
-}
-
-/* #DescargarLibros, #DescargarTarjetas {
-  width: 50%;
-  padding: 40px;
-} */
-
-#DescargarLibros h3, #DescargarLibrosAvent h3 {
-  margin-bottom: 20px;
-}
-
-.libroDescarga {
-  font-size: 24px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.libroDescarga:hover {
-  color: rgb(0, 102, 255);
-}
-
-#DescargarLibrosAvent #Aventureros-section, #DescargarLibros .conquistadores-section {
-  display: flex;
-  align-items: center;
-}
-
-#DescargarLibrosAvent #Aventureros-section img, 
-#DescargarLibros .conquistadores-section img {
-  padding-right: 10px;
-}
-
-/* Estilos para dispositivos móviles ***********************************************/
-@media only screen and (max-width: 600px) {
-  
-  /* Main Styles */
-  #Saludo {
-    padding: 10px;
-  }
-
-  #Saludo h1 {
-    font-size: 1.2rem;
-    color: black;
-  }
-
-  .saludoLogoClub {
-    width: 40%;
-    margin-top: 5px;
-  }
-
-  #container {
+.list-group-item {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-.containerSectionConquistadores .Descargar,
-.section-aventureros .Descargar {
-  width: 100%;
-  padding: 0 30px;
-}
-
-.containerSectionConquistadores, .section-aventureros{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.conquistadores-section div h2, .section-title-aventureros div h2{
-  font-size: 1.5rem;
-}
-
-#container .conquistadores-section,
-#container .section-title-aventureros {
-  width: 95%;
-}
-
-  #DescargarLibros,
-  #DescargarTarjetas, #DescargarLibrosAvent, #DescargarTarjetasAvent {
-    padding: 0px 20px 0px 20px;
-    
-  }
-
-  .Descargar h3{
-    font-size: 20px;
-    padding-left: 20px;
-  }
-
-  .libroDescarga {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: white;
-  }
-  
+    justify-content: space-between; /* Alinea los elementos a ambos extremos */
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
 
-/* Colors */
-/* Azul: #0072c6 */
-/* Rojo: #dc3545 */
-/* Verde: #28a745 */
-/* Gris: #ccc */
-/* Amarillo: #ffc107 */
 
-/*AQUI EMPIEZA A DARLE ESTILOS AL INICIO */
+.nav-tabs .nav-link {
+    color: #495057;
+}
 
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.list-group-item {
+    transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f1f8ff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
