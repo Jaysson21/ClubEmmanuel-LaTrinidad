@@ -1,0 +1,209 @@
+/* =========================
+   PALETA Y BASE (claro)
+   ========================= */
+:root{
+  --bg: #f8fafc;          /* fondo de página */
+  --surface: #ffffff;     /* tarjetas / contenedores */
+  --border: #e6e8ee;      /* bordes suaves */
+  --ink: #0f172a;         /* texto principal (gris muy oscuro) */
+  --muted: #475569;       /* texto secundario */
+  --acc: #2563eb;         /* acento (botones / tabs) */
+  --acc-600:#1d4ed8;
+  --acc-50:#eef2ff;
+
+  --shadow-sm: 0 2px 6px rgba(15,23,42,.06);
+  --shadow-md: 0 6px 18px rgba(15,23,42,.07);
+
+  --radius: 14px;
+}
+
+/* Fondo general claro y tipografía */
+html, body{
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* =========================
+   NAVBAR / HEADER
+   ========================= */
+.nav-wrap{
+  background: linear-gradient(180deg, #3a4251, #3a4251) !important; /* mantén tu header oscuro si así te gusta */
+  color:#fff;
+}
+.nav .brand span{ font-weight:700; }
+.nav-links .btn-cta{
+  background:#f4b000; color:#1f2937; border-radius:999px; padding:.4rem .8rem;
+}
+
+/* =========================
+   CARDS / CONTENEDORES
+   ========================= */
+.card, .neo-card, .card-neo, .hero-neo{
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* Sección hero de Servicios */
+#hero .text-center h1{ color: var(--ink); }
+#hero .text-center p{ color: var(--muted); }
+
+/* =========================
+   TABS (Bootstrap 4)
+   ========================= */
+.nav-tabs{
+  border-bottom: 1px solid var(--border) !important;
+}
+.nav-tabs .nav-link{
+  border: 0 !important;
+  color: var(--muted);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: .35rem .7rem;
+}
+.nav-tabs .nav-link.active{
+  background: #ffd166;          /* pastilla amarilla que ya usas */
+  color: #1f2937;
+}
+
+/* =========================
+   LISTAS DE RECURSOS
+   ========================= */
+#recursos .card{ background: var(--surface); }
+#recursos .card-header{
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+  color: var(--ink);
+}
+#recursos .card-body{ background: var(--surface); }
+
+.list-group-item{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:.75rem; border:1px solid var(--border);
+  background: #0b1221;                /* fondo oscuro de "fila" actual… */
+  background: var(--surface);          /* …lo cambiamos a claro */
+  border-radius: 10px;
+  padding: .7rem .8rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: .65rem;               /* separación entre filas */
+}
+.list-group-item > span{
+  display:inline-flex; align-items:center; gap:.6rem;
+  color: var(--ink);
+}
+.list-group-item img,
+img.imagen-lista{
+  width: 52px; height: 52px; object-fit: contain;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+.btn-primary, .download-btn.btn{
+  background: var(--acc) !important;
+  border-color: var(--acc) !important;
+  color:#fff !important;
+  font-weight:700;
+  padding: .35rem .7rem;
+  border-radius: 8px;
+}
+.btn-primary:hover, .download-btn.btn:hover{
+  background: var(--acc-600) !important; border-color: var(--acc-600) !important;
+}
+
+/* =========================
+   CARRUSEL NEO (si usas el nuevo)
+   ========================= */
+.carousel-neo{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+.carousel-btn{
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   FOOTER – MÁS PADDING
+   ========================= */
+footer#footer{
+  background: #0f172a;                 /* footer oscuro elegante */
+  color: #e5e7eb;
+  padding-top: 24px; padding-bottom: 24px;
+}
+footer #footer .container.footer,
+footer .container.footer{
+  padding: 16px 16px;                  /* padding interno */
+}
+footer .container.sub{
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-top: 12px;
+  padding-top: 12px; padding-bottom: 12px;
+}
+
+/* =========================
+   MOBILE TWEAKS (S8+ 360–400px)
+   ========================= */
+@media (max-width: 400px){
+  .nav .brand span{ font-size: .95rem; }
+  .nav .brand img{ width: 28px; height: 28px; }
+
+  .container, .maxw-xl{ padding-left:10px; padding-right:10px; }
+
+  /* Cards de Servicios apretaditas */
+  #recursos .card{ margin-bottom: 1rem; }
+  .list-group-item{
+    padding:.6rem .65rem;
+  }
+  .list-group-item > span{ gap:.5rem; }
+  .list-group-item img{ width:46px; height:46px; }
+
+  /* Botón no se descuadre ni sobresalga */
+  .download-btn.btn{ padding:.32rem .6rem; white-space:nowrap; }
+
+  /* Dots/controles del carrusel separados de los bordes */
+  .carousel-btn.prev{ left:6px; }
+  .carousel-btn.next{ right:6px; }
+  .carousel-dots{ bottom:8px; }
+}
+
+/* =========================
+   RETOQUES GENERALES
+   ========================= */
+h1,h2,h3,h4{ color: var(--ink); }
+p{ color: var(--muted); }
+
+.list-group-item span{ max-width: calc(100% - 110px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+
+/* ===== Mobile glassmorphism (solo <= 600px) ===== */
+@media (max-width: 600px){
+
+  /* Fondo con imagen + velo suave para contraste */
+  body::before{
+    content:"";
+    position: fixed; inset: 0;
+    background-image: var(--mobile-bg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(.9) saturate(1.05);
+    z-index: -2;
+  }
+  body::after{
+    content:"";
+    position: fixed; inset: 0;
+    /* velo muy sutil; ajusta opacidad si quieres más/menos contraste */
+    background: linear-gradient(to bottom, rgba(255,255,255,.40), rgba(255,255,255,.30));
+    z-index: -1;
+  }
+}
+
+
+

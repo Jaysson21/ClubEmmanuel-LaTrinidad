@@ -1,139 +1,83 @@
-<!DOCTYPE html>
-<html lang="es">
+---
+layout: default
+title: Inicio
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <!-- Deja solo 1 viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style/inicio.css">
-  <link rel="stylesheet" href="style/header-footer.css">
-
-  <!-- Font Awesome (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="shortcut icon" href="assets/Images/ClubLogo.png">
-
-  <title>Inicio | Club Emmanuel La Trinidad #1</title>
-</head>
-
-<body>
-  <!-- NAVBAR -->
-  <header class="nav-wrap">
-  <div class="container nav" role="navigation" aria-label="Principal">
-    <a class="brand" href="index.html" aria-label="Ir al inicio">
-      <img src="assets/Images/ClubLogo.png" alt="Logo del Club Emmanuel La Trinidad #1">
-      <span>Club Emmanuel • La Trinidad #1</span>
-    </a>
-    <ul class="nav-links" role="menubar" aria-label="Enlaces principales">
-      <li><a class="active" href="index.html" role="menuitem" aria-current="page">Inicio</a></li>
-      <li><a href="Servicios.html" role="menuitem">Servicios</a></li>
-      <li><a href="acerca.html" role="menuitem">Acerca</a></li>
-      <li><a href="#footer" role="menuitem">Contacto</a></li>
-      <li><a class="btn-cta" href="Servicios.html">Descargas</a></li>
-    </ul>
-    <button class="hamb" id="navToggle" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-  </div>
-  <nav id="mobileMenu" class="mobile" aria-label="Menú móvil" hidden>
-    <a class="active" href="index.html">Inicio</a>
-    <a href="Servicios.html">Servicios</a>
-    <a href="acerca.html">Acerca</a>
-    <a href="#footer">Contacto</a>
-    <a class="btn-cta" href="Servicios.html">Ver recursos</a>
-  </nav>
-</header>
-
-
-  <main>
-    <section class="main-section">
-      <div class="descripcion">
-        <h2><strong>¡Bienvenido al sitio oficial del Club Emmanuel La Trinidad #1!</strong></h2>
-        <p>
-          Este espacio está pensado para ti: aquí encontrarás recursos, materiales y guías
-          que te acompañarán en tu crecimiento como Conquistador o Aventurero.
-          <br><br>
-          Explora, descarga y comparte — todo lo que hacemos es para seguir avanzando juntos
-          en la fe, el servicio y la amistad.
-          <br><br>
-          ¡Nos alegra que formes parte de esta experiencia! 🌟
-        </p>
-
-      </div>
-
-      <div class="wrapper" aria-label="Carrusel de imágenes">
-        <button id="left" class="carousel-btn" aria-label="Imagen anterior"><i
-            class="fa-solid fa-angle-left"></i></button>
-        <div class="carousel">
-          <img src="assets/Images/LogoClubDora.png" alt="Logo de Dora, actividad del club" draggable="false"
-            loading="lazy">
-          <img src="assets/Images/3.jpg" alt="Actividad del club 3" draggable="false" loading="lazy">
-          <img src="assets/Images/5.jpg" alt="Actividad del club 5" draggable="false" loading="lazy">
-          <img src="assets/Images/7.png" alt="Actividad del club 7" draggable="false" loading="lazy">
-          <img src="assets/Images/8.jpg" alt="Actividad del club 8" draggable="false" loading="lazy">
-          <img src="assets/Images/Jaysson.jpg" alt="Miembro del club Jaysson" draggable="false" loading="lazy">
-          <img src="assets/Images/1.jpg" alt="Actividad del club 1" draggable="false" loading="lazy">
-          <img src="assets/Images/Portada.jpg" alt="Portada del club" draggable="false" loading="lazy">
-          <img src="assets/Images/ClubLogo.png" alt="Logo del club" draggable="false" loading="lazy">
-        </div>
-        <button id="right" class="carousel-btn" aria-label="Imagen siguiente"><i
-            class="fa-solid fa-angle-right"></i></button>
-      </div>
-    </section>
-
-    <section class="button-section">
-      <div class="button-serv">
-        <!-- Si tu página correcta es Servicios.html, cambia el href -->
-        <a href="Servicios.html">Descargar Libros</a>
-      </div>
-    </section>
-    <p class="p-final">Somos un club de jóvenes adventistas comprometidos con el servicio a Dios y a nuestra comunidad.
+<section class="main-section">
+  <div class="descripcion">
+    <h2><strong>¡Bienvenido al sitio oficial del Club Emmanuel La Trinidad #1!</strong></h2>
+    <p>
+      Este espacio está pensado para ti: aquí encontrarás recursos, materiales y guías
+      que te acompañarán en tu crecimiento como Conquistador o Aventurero.
+      <br><br>
+      Explora, descarga y comparte — todo lo que hacemos es para seguir avanzando juntos
+      en la fe, el servicio y la amistad.
+      <br><br>
+      ¡Nos alegra que formes parte de esta experiencia! 🌟
     </p>
-  </main>
+  </div>
 
-  <!-- FOOTER -->
-  <footer id="footer" role="contentinfo">
-  <div class="container footer">
-    <div>
-      <span class="badge">Club Emmanuel La Trinidad #1</span>
-      <p class="footer-desc">Recursos y materiales para Conquistadores y Aventureros. Formación, servicio y crecimiento en comunidad.</p>
-      <div class="social">
-        <a href="https://facebook.com/emmanuel.latrinidad.9?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/emmanuellatrinidad?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://goo.gl/maps/w37dXgodMdayAtKH6" target="_blank" rel="noopener" aria-label="Ubicación en Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+  <section class="container maxw-xl my-4">
+  <div class="carousel-neo"
+       id="heroCarousel"
+       role="region"
+       aria-roledescription="Carrusel"
+       aria-label="Galería de actividades del Club"
+       aria-live="off">
+
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        <!-- Slide 1 -->
+        <div class="carousel-slide is-active">
+          <img src="{{ '/assets/Images/Portada.jpg' | relative_url }}" alt="Portada del club">
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <img src="{{ '/assets/Images/3.jpg' | relative_url }}" alt="Actividad del club 3">
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <img src="{{ '/assets/Images/5.jpg' | relative_url }}" alt="Actividad del club 5">
+        </div>
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+          <img src="{{ '/assets/Images/8.jpg' | relative_url }}" alt="Actividad del club 8">
+        </div>
+        <!-- Slide 5 -->
+        <div class="carousel-slide">
+          <img src="{{ '/assets/Images/Jaysson.jpg' | relative_url }}" alt="Miembro del club Jaysson">
+        </div>
       </div>
-      <div class="footer-address"><p>Dirección: Costado Nor-Oeste Hospital Pedro Altamirano, La Trinidad, Estelí</p></div>
     </div>
-    <div>
-      <h4>Secciones</h4>
-      <nav aria-label="Secciones del sitio">
-        <div><a class="active" href="index.html">Inicio</a></div>
-        <div><a href="Servicios.html">Servicios</a></div>
-        <div><a href="acerca.html">Acerca</a></div>
-        <div><a href="#footer">Contacto</a></div>
-      </nav>
-    </div>
-    <div>
-      <h4>Atajos</h4>
-      <div><a href="Servicios.html#conquistadores">Conquistadores</a></div>
-      <div><a href="Servicios.html#aventureros">Aventureros</a></div>
-    </div>
+
+    <!-- Controles -->
+    <button class="carousel-btn prev" aria-label="Anterior" data-dir="-1">❮</button>
+    <button class="carousel-btn next" aria-label="Siguiente" data-dir="1">❯</button>
+
+    <!-- Indicadores -->
+    <ol class="carousel-dots" aria-label="Indicadores">
+      <li><button class="dot is-active" aria-label="Ir al slide 1" data-slide="0" aria-current="true"></button></li>
+      <li><button class="dot" aria-label="Ir al slide 2" data-slide="1"></button></li>
+      <li><button class="dot" aria-label="Ir al slide 3" data-slide="2"></button></li>
+      <li><button class="dot" aria-label="Ir al slide 4" data-slide="3"></button></li>
+      <li><button class="dot" aria-label="Ir al slide 5" data-slide="4"></button></li>
+    </ol>
   </div>
-  <div class="container sub">
-    <span>© <span id="year"></span> Jaysson Fley González — Todos los derechos reservados</span>
-    <span>Hecho con ❤️ en Nicaragua</span>
+</section>
+
+</section>
+
+<section class="button-section">
+  <div class="button-serv">
+    <a href="{{ '/Servicios.html' | relative_url }}">Descargar Libros</a>
   </div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</section>
 
+<p class="p-final">
+  Somos un club de jóvenes adventistas comprometidos con el servicio a Dios y a nuestra comunidad.
+</p>
 
-  <!-- Scripts -->
-  <script src="js/menuburguer.js"></script>
-  <script src="js/boton-carosuel.js"></script>
-  <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+{% assign page = page | merge: {"extra_js": "
+ <script src="{{ '/boton-carosuel.js' | relative_url }}"></script>
+"} %}
 
-</html>

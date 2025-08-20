@@ -1,399 +1,279 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios | Club Emmanuel La Trinidad #1</title>
+---
+layout: default
+title: Servicios
+---
 
-  <!-- Bootstrap para las cards/tabs que ya usas -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<section class="container py-5" id="hero">
+  <div class="text-center">
+    <h1 class="mb-3"><strong>Recursos que te acompañan en cada paso</strong></h1>
+    <p class="lead" style="max-width: 60ch; margin: 0 auto;">
+      Aquí tienes libros, tarjetas y materiales para Conquistadores y Aventureros.
+      Explora, descarga y compártelo con tu equipo — crecemos juntos en fe, servicio y amistad.
+    </p>
+  </div>
+</section>
 
-  <!-- Estilos del módulo de recursos (tus cards y tabs) -->
-  <link rel="stylesheet" href="style/Recursos.css">
+<section class="container pb-4" id="recursos">
+  <div class="row">
+    <!-- Conquistadores -->
+    <div class="col-md-6 mb-4" id="conquistadores">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="mb-0 h4">Conquistadores / Guías Mayores</h2>
+        </div>
+        <div class="card-body">
 
-  <!-- Estilos modernos de header/footer (el mismo que ya aplicamos en index) -->
-  <link rel="stylesheet" href="style/header-footer.css">
+          <ul class="nav nav-tabs" id="conquistadoresTabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="conq-libros-tab" data-toggle="tab"
+                 href="#conq-libros" role="tab" aria-controls="conq-libros" aria-selected="true">Libros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="conq-tarjetas-tab" data-toggle="tab"
+                 href="#conq-tarjetas" role="tab" aria-controls="conq-tarjetas" aria-selected="false">Tarjetas</a>
+            </li>
+          </ul>
 
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link rel="shortcut icon" href="assets/Images/ClubLogo.png">
-</head>
-
-<body>
-  <!-- NAVBAR -->
-  <header class="nav-wrap">
-    <div class="container nav" role="navigation" aria-label="Principal">
-      <a class="brand" href="index.html" aria-label="Ir al inicio">
-        <img src="assets/Images/ClubLogo.png" alt="Logo del Club Emmanuel La Trinidad #1">
-        <span>Club Emmanuel • La Trinidad #1</span>
-      </a>
-
-      <!-- Desktop -->
-      <ul class="nav-links" role="menubar" aria-label="Enlaces principales">
-        <li><a href="index.html" role="menuitem">Inicio</a></li>
-        <li><a class="active" href="Servicios.html" role="menuitem" aria-current="page">Servicios</a></li>
-        <li><a href="acerca.html" role="menuitem">Acerca de</a></li>
-        <li><a href="#footer" role="menuitem">Contacto</a></li>
-        <li><a class="btn-cta" href="Servicios.html">Descargas</a></li>
-      </ul>
-
-      <!-- Mobile button -->
-      <button class="hamb" id="navToggle" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-
-    <!-- Mobile menu -->
-    <nav id="mobileMenu" class="mobile" aria-label="Menú móvil" hidden>
-      <a href="index.html">Inicio</a>
-      <a class="active" href="Servicios.html">Servicios</a>
-      <a href="acerca.html">Acerca de</a>
-      <a href="#footer">Contacto</a>
-      <a class="btn-cta" href="Servicios.html">Ver recursos</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- HERO / encabezado fresco -->
-    <section class="container py-5" id="hero">
-      <div class="text-center">
-        <h1 class="mb-3"><strong>Recursos que te acompañan en cada paso</strong></h1>
-        <p class="lead" style="max-width: 60ch; margin: 0 auto;">
-          Aquí tienes libros, tarjetas y materiales para Conquistadores y Aventureros.
-          Explora, descarga y compártelo con tu equipo — crecemos juntos en fe, servicio y amistad.
-        </p>
-        <!-- Alternativas de copy (deja una):
-        1) Juventil/energía:
-        <p class="lead" style="max-width: 60ch; margin: 0 auto;">
-          Todo lo que necesitas, en un solo lugar: manuales, tarjetas y guías.
-          Sube el ánimo, organiza tu unidad y sal a servir. ¡Vamos con todo!
-        </p>
-        2) Inspiracional:
-        <p class="lead" style="max-width: 60ch; margin: 0 auto;">
-          Materiales para aprender, servir y liderar con propósito.
-          Que cada descarga sea una oportunidad para crecer y ayudar a otros.
-        </p>
-        -->
-      </div>
-    </section>
-
-    <!-- Contenido de recursos -->
-    <section class="container pb-4" id="recursos">
-      <div class="row">
-        <!-- Columna Conquistadores -->
-        <div class="col-md-6 mb-4" id="conquistadores">
-          <div class="card">
-            <div class="card-header">
-              <h2 class="mb-0 h4">Conquistadores / Guías Mayores</h2>
-            </div>
-            <div class="card-body">
-              <ul class="nav nav-tabs" id="conquistadoresTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="conquistadores-libros-tab" data-bs-toggle="tab"
-                          data-bs-target="#conquistadores-libros" type="button" role="tab"
-                          aria-controls="conquistadores-libros" aria-selected="true">Libros</button>
+          <div class="tab-content mt-3" id="conq-tab-content">
+            <!-- Libros -->
+            <div class="tab-pane fade show active" id="conq-libros" role="tabpanel" aria-labelledby="conq-libros-tab">
+              <h3 class="h6 mb-3">Libros de Conquistadores</h3>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/1Amigo.png' | relative_url }}" alt="Libro Conquistadores: Amigo" class="imagen-lista" loading="lazy">
+                    Amigo
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Conquistadores/1Amigo.pdf' | relative_url }}">Descargar</button>
                 </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="conquistadores-tarjetas-tab" data-bs-toggle="tab"
-                          data-bs-target="#conquistadores-tarjetas" type="button" role="tab"
-                          aria-controls="conquistadores-tarjetas" aria-selected="false">Tarjetas</button>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/2Compañero.png' | relative_url }}" alt="Libro Conquistadores: Compañero" class="imagen-lista" loading="lazy">
+                    Compañero
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Conquistadores/2Compañero.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/3Explorador.png' | relative_url }}" alt="Libro Conquistadores: Explorador" class="imagen-lista" loading="lazy">
+                    Explorador
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Conquistadores/3Explorador.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/4Orientador.png' | relative_url }}" alt="Libro Conquistadores: Orientador" class="imagen-lista" loading="lazy">
+                    Orientador
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Conquistadores/4Orientador.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/5Viajero.png' | relative_url }}" alt="Libro Conquistadores: Viajero" class="imagen-lista" loading="lazy">
+                    Viajero
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Conquistadores/5Viajero.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/6Guia.png' | relative_url }}" alt="Libro Conquistadores: Guía" class="imagen-lista" loading="lazy">
+                    Guía
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Conquistadores/6Guia.pdf' | relative_url }}">Descargar</button>
                 </li>
               </ul>
-
-              <div class="tab-content mt-3" id="conquistadoresTabContent">
-                <!-- Libros -->
-                <div class="tab-pane fade show active" id="conquistadores-libros" role="tabpanel"
-                     aria-labelledby="conquistadores-libros-tab">
-                  <h3 class="h6 mb-3">Libros de Conquistadores</h3>
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/1Amigo.png" alt="Libro Conquistadores: Amigo" class="imagen-lista" loading="lazy">
-                        Amigo
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Conquistadores/1Amigo.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/2Compañero.png" alt="Libro Conquistadores: Compañero" class="imagen-lista" loading="lazy">
-                        Compañero
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Conquistadores/2Compañero.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/3Explorador.png" alt="Libro Conquistadores: Explorador" class="imagen-lista" loading="lazy">
-                        Explorador
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Conquistadores/3Explorador.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/4Orientador.png" alt="Libro Conquistadores: Orientador" class="imagen-lista" loading="lazy">
-                        Orientador
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Conquistadores/4Orientador.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/5Viajero.png" alt="Libro Conquistadores: Viajero" class="imagen-lista" loading="lazy">
-                        Viajero
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Conquistadores/5Viajero.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/6Guia.png" alt="Libro Conquistadores: Guía" class="imagen-lista" loading="lazy">
-                        Guía
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Conquistadores/6Guia.pdf">Descargar</button>
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- Tarjetas -->
-                <div class="tab-pane fade" id="conquistadores-tarjetas" role="tabpanel"
-                     aria-labelledby="conquistadores-tarjetas-tab">
-                  <h3 class="h6 mb-3">Tarjetas de Conquistadores</h3>
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/1Amigo.png" alt="Tarjeta Conquistadores: Amigo" class="imagen-lista" loading="lazy">
-                        Amigo
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Conquistadores/1AmigoTarjeta.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/2Compañero.png" alt="Tarjeta Conquistadores: Compañero" class="imagen-lista" loading="lazy">
-                        Compañero
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Conquistadores/2CompañeroTarjeta.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/3Explorador.png" alt="Tarjeta Conquistadores: Explorador" class="imagen-lista" loading="lazy">
-                        Explorador
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Conquistadores/3ExploradorTarjeta.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/4Orientador.png" alt="Tarjeta Conquistadores: Orientador" class="imagen-lista" loading="lazy">
-                        Orientador
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Conquistadores/4OrientadorTarjeta.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/5Viajero.png" alt="Tarjeta Conquistadores: Viajero" class="imagen-lista" loading="lazy">
-                        Viajero
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Conquistadores/5ViajeroTarjeta.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Conquis/6Guia.png" alt="Tarjeta Conquistadores: Guía" class="imagen-lista" loading="lazy">
-                        Guía
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Conquistadores/6GuiaTarjeta.pdf">Descargar</button>
-                    </li>
-                  </ul>
-                </div>
-              </div><!-- /tab-content -->
             </div>
-          </div>
-        </div>
 
-        <!-- Columna Aventureros -->
-        <div class="col-md-6 mb-4" id="aventureros">
-          <div class="card">
-            <div class="card-header">
-              <h2 class="mb-0 h4">Aventureros</h2>
-            </div>
-            <div class="card-body">
-              <ul class="nav nav-tabs" id="aventurerosTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="aventureros-libros-tab" data-bs-toggle="tab"
-                          data-bs-target="#aventureros-libros" type="button" role="tab"
-                          aria-controls="aventureros-libros" aria-selected="true">Libros</button>
+            <!-- Tarjetas -->
+            <div class="tab-pane fade" id="conq-tarjetas" role="tabpanel" aria-labelledby="conq-tarjetas-tab">
+              <h3 class="h6 mb-3">Tarjetas de Conquistadores</h3>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/1Amigo.png' | relative_url }}" alt="Tarjeta Conquistadores: Amigo" class="imagen-lista" loading="lazy">
+                    Amigo
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Conquistadores/1AmigoTarjeta.pdf' | relative_url }}">Descargar</button>
                 </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="aventureros-tarjetas-tab" data-bs-toggle="tab"
-                          data-bs-target="#aventureros-tarjetas" type="button" role="tab"
-                          aria-controls="aventureros-tarjetas" aria-selected="false">Tarjetas</button>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/2Compañero.png' | relative_url }}" alt="Tarjeta Conquistadores: Compañero" class="imagen-lista" loading="lazy">
+                    Compañero
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Conquistadores/2CompañeroTarjeta.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/3Explorador.png' | relative_url }}" alt="Tarjeta Conquistadores: Explorador" class="imagen-lista" loading="lazy">
+                    Explorador
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Conquistadores/3ExploradorTarjeta.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/4Orientador.png' | relative_url }}" alt="Tarjeta Conquistadores: Orientador" class="imagen-lista" loading="lazy">
+                    Orientador
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Conquistadores/4OrientadorTarjeta.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/5Viajero.png' | relative_url }}" alt="Tarjeta Conquistadores: Viajero" class="imagen-lista" loading="lazy">
+                    Viajero
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Conquistadores/5ViajeroTarjeta.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Conquis/6Guia.png' | relative_url }}" alt="Tarjeta Conquistadores: Guía" class="imagen-lista" loading="lazy">
+                    Guía
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Conquistadores/6GuiaTarjeta.pdf' | relative_url }}">Descargar</button>
                 </li>
               </ul>
-
-              <div class="tab-content mt-3" id="aventurerosTabContent">
-                <!-- Libros -->
-                <div class="tab-pane fade show active" id="aventureros-libros" role="tabpanel"
-                     aria-labelledby="aventureros-libros-tab">
-                  <h3 class="h6 mb-3">Libros de Aventureros</h3>
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Corderitos.png" alt="Libro Aventureros: Corderitos" class="imagen-lista" loading="lazy">
-                        Corderitos
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Aventureros/04CORDERITOS.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Aves Madrugadoras.png" alt="Libro Aventureros: Aves Madrugadoras" class="imagen-lista" loading="lazy">
-                        Aves Madrugadoras
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Aventureros/05AVES_MADRUGADORAS.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Abejas Industriosas.png" alt="Libro Aventureros: Abejitas Industriosas" class="imagen-lista" loading="lazy">
-                        Abejitas Industriosas
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Aventureros/06ABEJAS_INDUSTRIOSAS.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Rayos de Sol.png" alt="Libro Aventureros: Rayitos de Sol" class="imagen-lista" loading="lazy">
-                        Rayitos de Sol
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Aventureros/07RAYOS_DE_SOL.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Contructor.png" alt="Libro Aventureros: Constructores" class="imagen-lista" loading="lazy">
-                        Constructores
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Aventureros/08CONSTRUCTORES.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Manos Ayudadoras.png" alt="Libro Aventureros: Manos Ayudadoras" class="imagen-lista" loading="lazy">
-                        Manos Ayudadoras
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Libros/Aventureros/09MANOSAYUDADORAS.pdf">Descargar</button>
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- Tarjetas -->
-                <div class="tab-pane fade" id="aventureros-tarjetas" role="tabpanel" aria-labelledby="aventureros-tarjetas-tab">
-                  <h3 class="h6 mb-3">Tarjetas de Aventureros</h3>
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Corderitos.png" alt="Tarjeta Aventureros: Corderitos" class="imagen-lista" loading="lazy">
-                        Corderitos
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Aventureros/01TARJETA_CORDERITO.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Aves Madrugadoras.png" alt="Tarjeta Aventureros: Aves Madrugadoras" class="imagen-lista" loading="lazy">
-                        Aves Madrugadoras
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Aventureros/02TARJETA_AVES">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Abejas Industriosas.png" alt="Tarjeta Aventureros: Abejitas Industriosas" class="imagen-lista" loading="lazy">
-                        Abejitas Industriosas
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Aventureros/03TARJETA_ABEJITAS.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Rayos de Sol.png" alt="Tarjeta Aventureros: Rayitos de Sol" class="imagen-lista" loading="lazy">
-                        Rayitos de Sol
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Aventureros/04TARJETA_RAYITOS.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Contructor.png" alt="Tarjeta Aventureros: Constructores" class="imagen-lista" loading="lazy">
-                        Constructores
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Aventureros/05TARJETA_CONSTRUCTORES.pdf">Descargar</button>
-                    </li>
-                    <li class="list-group-item">
-                      <span>
-                        <img src="assets/Images/Aventureros/Manos Ayudadoras.png" alt="Tarjeta Aventureros: Manos Ayudadoras" class="imagen-lista" loading="lazy">
-                        Manos Ayudadoras
-                      </span>
-                      <button class="btn btn-primary btn-sm download-btn" data-file="assets/Tarjetas/Aventureros/06TARJETA_MANOS.pdf">Descargar</button>
-                    </li>
-                  </ul>
-                </div>
-              </div><!-- /tab-content -->
             </div>
-          </div>
+          </div><!-- /tab-content -->
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer id="footer" role="contentinfo">
-    <div class="container footer">
-      <div>
-        <span class="badge">Club Emmanuel La Trinidad #1</span>
-        <p class="footer-desc">
-          Recursos y materiales para Conquistadores y Aventureros.
-          Formación, servicio y crecimiento en comunidad.
-        </p>
-        <div class="social">
-          <a href="https://facebook.com/emmanuel.latrinidad.9?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://instagram.com/emmanuellatrinidad?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://goo.gl/maps/w37dXgodMdayAtKH6" target="_blank" rel="noopener" aria-label="Ubicación en Google Maps">
-            <i class="fas fa-map-marker-alt"></i>
-          </a>
-        </div>
-        <div class="footer-address">
-          <p>Dirección: Costado Nor-Oeste Hospital Pedro Altamirano, La Trinidad, Estelí</p>
-        </div>
-      </div>
-
-      <div>
-        <h4>Secciones</h4>
-        <nav aria-label="Secciones del sitio">
-          <div><a href="index.html">Inicio</a></div>
-          <div><a class="active" href="Servicios.html">Servicios</a></div>
-          <div><a href="acerca.html">Acerca de</a></div>
-          <div><a href="#footer">Contacto</a></div>
-        </nav>
-      </div>
-
-      <div>
-        <h4>Atajos</h4>
-        <div><a href="#conquistadores">Conquistadores</a></div>
-        <div><a href="#aventureros">Aventureros</a></div>
       </div>
     </div>
 
-    <div class="container sub">
-      <span>© <span id="year"></span> Jaysson Fley González — Todos los derechos reservados</span>
-      <span>Hecho con ❤️ en Nicaragua</span>
+    <!-- Aventureros -->
+    <div class="col-md-6 mb-4" id="aventureros">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="mb-0 h4">Aventureros</h2>
+        </div>
+        <div class="card-body">
+
+          <ul class="nav nav-tabs" id="avTabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="av-libros-tab" data-toggle="tab"
+                 href="#av-libros" role="tab" aria-controls="av-libros" aria-selected="true">Libros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="av-tarjetas-tab" data-toggle="tab"
+                 href="#av-tarjetas" role="tab" aria-controls="av-tarjetas" aria-selected="false">Tarjetas</a>
+            </li>
+          </ul>
+
+          <div class="tab-content mt-3" id="av-tab-content">
+            <!-- Libros -->
+            <div class="tab-pane fade show active" id="av-libros" role="tabpanel" aria-labelledby="av-libros-tab">
+              <h3 class="h6 mb-3">Libros de Aventureros</h3>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Corderitos.png' | relative_url }}" alt="Libro Aventureros: Corderitos" class="imagen-lista" loading="lazy">
+                    Corderitos
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Aventureros/04CORDERITOS.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Aves Madrugadoras.png' | relative_url }}" alt="Libro Aventureros: Aves Madrugadoras" class="imagen-lista" loading="lazy">
+                    Aves Madrugadoras
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Aventureros/05AVES_MADRUGADORAS.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Abejas Industriosas.png' | relative_url }}" alt="Libro Aventureros: Abejitas Industriosas" class="imagen-lista" loading="lazy">
+                    Abejitas Industriosas
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Aventureros/06ABEJAS_INDUSTRIOSAS.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Rayos de Sol.png' | relative_url }}" alt="Libro Aventureros: Rayitos de Sol" class="imagen-lista" loading="lazy">
+                    Rayitos de Sol
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Aventureros/07RAYOS_DE_SOL.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Contructor.png' | relative_url }}" alt="Libro Aventureros: Constructores" class="imagen-lista" loading="lazy">
+                    Constructores
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Aventureros/08CONSTRUCTORES.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Manos Ayudadoras.png' | relative_url }}" alt="Libro Aventureros: Manos Ayudadoras" class="imagen-lista" loading="lazy">
+                    Manos Ayudadoras
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Libros/Aventureros/09MANOSAYUDADORAS.pdf' | relative_url }}">Descargar</button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tarjetas -->
+            <div class="tab-pane fade" id="av-tarjetas" role="tabpanel" aria-labelledby="av-tarjetas-tab">
+              <h3 class="h6 mb-3">Tarjetas de Aventureros</h3>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Corderitos.png' | relative_url }}" alt="Tarjeta Aventureros: Corderitos" class="imagen-lista" loading="lazy">
+                    Corderitos
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Aventureros/01TARJETA_CORDERITO.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Aves Madrugadoras.png' | relative_url }}" alt="Tarjeta Aventureros: Aves Madrugadoras" class="imagen-lista" loading="lazy">
+                    Aves Madrugadoras
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Aventureros/02TARJETA_AVES' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Abejas Industriosas.png' | relative_url }}" alt="Tarjeta Aventureros: Abejitas Industriosas" class="imagen-lista" loading="lazy">
+                    Abejitas Industriosas
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Aventureros/03TARJETA_ABEJITAS.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Rayos de Sol.png' | relative_url }}" alt="Tarjeta Aventureros: Rayitos de Sol" class="imagen-lista" loading="lazy">
+                    Rayitos de Sol
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Aventureros/04TARJETA_RAYITOS.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Contructor.png' | relative_url }}" alt="Tarjeta Aventureros: Constructores" class="imagen-lista" loading="lazy">
+                    Constructores
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Aventureros/05TARJETA_CONSTRUCTORES.pdf' | relative_url }}">Descargar</button>
+                </li>
+                <li class="list-group-item">
+                  <span>
+                    <img src="{{ '/assets/Images/Aventureros/Manos Ayudadoras.png' | relative_url }}" alt="Tarjeta Aventureros: Manos Ayudadoras" class="imagen-lista" loading="lazy">
+                    Manos Ayudadoras
+                  </span>
+                  <button class="btn btn-primary btn-sm download-btn" data-file="{{ '/assets/Tarjetas/Aventureros/06TARJETA_MANOS.pdf' | relative_url }}">Descargar</button>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /tab-content -->
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/menuburguer.js"></script>
-  <script>
-    // Año dinámico en footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+{% assign page = page | merge: {"extra_js": "
+<script>
+  // Año dinámico (por si se usa el footer sin script inline)
+  var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
 
-    // Manejo de botones de descarga (abre en nueva pestaña)
-    document.querySelectorAll('.download-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const file = btn.getAttribute('data-file');
-        if (file) window.open(file, '_blank', 'noopener');
-      });
+  // Manejo de botones de descarga (abre en nueva pestaña)
+  document.querySelectorAll('.download-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var file = btn.getAttribute('data-file');
+      if (file) window.open(file, '_blank', 'noopener');
     });
-  </script>
-</body>
-</html>
+  });
+</script>
+ <script src="{{ '/js/Recursos.js' | relative_url }}"></script>
+
+"} %}

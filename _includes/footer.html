@@ -1,0 +1,44 @@
+<footer id="footer" role="contentinfo">
+  <div class="container footer">
+    <div>
+      <span class="badge">Club Emmanuel La Trinidad #1</span>
+      <p class="footer-desc">
+        Recursos y materiales para Conquistadores y Aventureros. Formación, servicio y crecimiento en comunidad.
+      </p>
+      <div class="social">
+        <a href="https://facebook.com/emmanuel.latrinidad.9?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/emmanuellatrinidad?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://goo.gl/maps/w37dXgodMdayAtKH6" target="_blank" rel="noopener" aria-label="Ubicación en Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+      <div class="footer-address">
+        <p>Dirección: Costado Nor-Oeste Hospital Pedro Altamirano, La Trinidad, Estelí</p>
+      </div>
+    </div>
+
+    <div>
+      <h4>Secciones</h4>
+      <nav aria-label="Secciones del sitio">
+        <div><a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Inicio</a></div>
+        <div><a class="{% if page.url contains 'Servicios' %}active{% endif %}" href="{{ '/Servicios.html' | relative_url }}">Servicios</a></div>
+        <div><a class="{% if page.url contains 'acerca' %}active{% endif %}" href="{{ '/acerca.html' | relative_url }}">Acerca</a></div>
+        <div><a href="#footer">Contacto</a></div>
+      </nav>
+    </div>
+
+    <div>
+      <h4>Atajos</h4>
+      <div><a href="{{ '/Servicios.html#conquistadores' | relative_url }}">Conquistadores</a></div>
+      <div><a href="{{ '/Servicios.html#aventureros' | relative_url }}">Aventureros</a></div>
+    </div>
+  </div>
+
+  <div class="container sub">
+    <span>© <span id="year"></span> Jaysson Fley González — Todos los derechos reservados</span>
+    <span>Hecho con ❤️ en Nicaragua</span>
+  </div>
+</footer>
+
+<script>
+  // Año dinámico (en todas las páginas)
+  (function(){ var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear(); })();
+</script>

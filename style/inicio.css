@@ -92,6 +92,71 @@ h2, .p-final {
     margin-left: 0px;
 }
 
+/* ===== Carousel Neo (autoplay) ===== */
+.carousel-neo{
+  position: relative;
+  background: var(--bg, #e9eef6);
+  border-radius: 20px;
+  box-shadow: 12px 12px 24px #c8cfdb, -12px -12px 24px #ffffff;
+  overflow: hidden;
+}
+.carousel-viewport{
+  position: relative;
+  overflow: hidden;
+}
+.carousel-track{
+  display: flex;
+  transition: transform .6s ease;
+  will-change: transform;
+}
+.carousel-slide{
+  min-width: 100%;
+  user-select: none;
+}
+.carousel-slide img{
+  display: block;
+  width: 100%;
+  height: clamp(220px, 45vw, 420px);
+  object-fit: cover;
+}
+
+/* Botones */
+.carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--bg, #e9eef6);
+  box-shadow: 6px 6px 12px #c8cfdb, -6px -6px 12px #ffffff;
+  display: grid; place-items: center;
+  font-size: 20px; line-height: 1;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  opacity: .9;
+}
+.carousel-btn:hover{ transform: translateY(-50%) scale(1.03); }
+.carousel-btn.prev{ left: 10px; }
+.carousel-btn.next{ right: 10px; }
+
+/* Dots */
+.carousel-dots{
+  position: absolute;
+  left: 0; right: 0; bottom: 10px;
+  display: flex; gap: 8px; justify-content: center; padding: 0; margin: 0;
+  list-style: none;
+}
+.carousel-dots .dot{
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 0; background: #c6cfdb; cursor: pointer;
+}
+.carousel-dots .dot.is-active,
+.carousel-dots .dot[aria-current="true"]{ background: #5b8def; }
+
+/* Arrastre */
+.carousel-neo.dragging .carousel-track{ transition: none; }
+
 /********************* Aqui empieza los estilos para los botones *****************************/
 .button-section .button-serv {
     display: flex;

@@ -1,0 +1,121 @@
+/* ===== Neumorphism base ===== */
+:root{
+  --bg:#e9eef6;              /* lienzo claro */
+  --elev:#f6f9ff;            /* superficie más clara */
+  --ink:#1f2a44;             /* texto */
+  --muted:#6b7a90;           /* texto secundario */
+  --acc:#5b8def;             /* acento */
+  --radius:20px;
+  --shadow: 12px 12px 24px #c8cfdb, -12px -12px 24px #ffffff;
+  --shadow-sm: 6px 6px 12px #c8cfdb, -6px -6px 12px #ffffff;
+  --shadow-inset: inset 8px 8px 16px #c8cfdb, inset -8px -8px 16px #ffffff;
+  --transition: .25s ease;
+}
+
+html,body{
+  background: radial-gradient(1200px 800px at 20% 10%, #f7faff, var(--bg)) fixed;
+  color: var(--ink);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* ===== Containers ===== */
+.neo-card{
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.neo-card:hover{ transform: translateY(-2px); box-shadow: 16px 16px 32px #c3cad6, -16px -16px 32px #ffffff; }
+.neo-card.is-inset{ box-shadow: var(--shadow-inset); }
+
+/* ===== Navbar ===== */
+.neo-nav{
+  background: var(--bg);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  padding: .4rem .75rem;
+}
+.neo-nav .nav-link{
+  color: var(--ink)!important;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: .5rem .9rem!important;
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.neo-nav .nav-link:hover{ box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+.neo-brand{
+  font-weight: 700; letter-spacing:.3px; color: var(--ink);
+}
+
+/* ===== Buttons ===== */
+.neo-btn{
+  background: var(--bg);
+  border: 0;
+  border-radius: 14px;
+  padding: .7rem 1rem;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  font-weight: 600;
+  transition: transform var(--transition), box-shadow var(--transition), color var(--transition);
+}
+.neo-btn:hover{ transform: translateY(-1px); box-shadow: 10px 10px 20px #c8cfdb, -10px -10px 20px #ffffff; }
+.neo-btn:active{ box-shadow: var(--shadow-inset); transform: translateY(0); }
+.neo-btn.acc{ color:#fff; background: linear-gradient(145deg, #6a9bff, var(--acc)); box-shadow: 10px 10px 20px #c1c9d8, -10px -10px 20px #ffffff; }
+.neo-btn.acc:active{ box-shadow: inset 8px 8px 16px #4d70b6, inset -8px -8px 16px #8db2ff; }
+
+/* ===== Hero ===== */
+.hero-neo{
+  background: var(--bg);
+  border-radius: clamp(22px, 3vw, 32px);
+  box-shadow: var(--shadow);
+  padding: clamp(1.2rem, 3vw, 2.5rem);
+}
+.hero-eyebrow{ color: var(--muted); font-weight:600; letter-spacing:.12em; text-transform: uppercase; }
+.hero-title{ font-size: clamp(1.8rem, 3.2vw, 3rem); font-weight:800; line-height:1.1; }
+.hero-sub{ color: var(--muted); font-size: clamp(1rem, 2vw, 1.15rem); }
+
+/* ===== Cards / grid ===== */
+.grid-neo{
+  display:grid; gap: clamp(.9rem, 2vw, 1.4rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+.card-neo{
+  background: var(--bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  padding: 1.1rem;
+}
+.card-neo h5{ margin:.2rem 0 .4rem; font-weight:700; }
+.card-neo p{ color:var(--muted); }
+
+/* ===== Chips / badges ===== */
+.chip-neo{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.35rem .7rem; border-radius:999px;
+  background: var(--bg); box-shadow: var(--shadow-sm);
+  color:var(--muted); font-weight:600; font-size:.9rem;
+}
+
+/* ===== Utilities ===== */
+.soft-separator{ height:1px; background: linear-gradient(90deg, transparent, #dfe5f0, transparent); margin: 1rem 0; }
+.maxw-xl{ max-width:1100px; margin-inline:auto; }
+.blur-backdrop{ backdrop-filter: blur(6px); }
+.shadow-inset{ box-shadow: var(--shadow-inset)!important; }
+.round{ border-radius: var(--radius)!important; }
+
+/* ===== A11y focus ===== */
+:focus-visible{
+  outline: 3px solid rgba(91,141,239,.55);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* ===== Small motion ===== */
+@media (prefers-reduced-motion:no-preference){
+  .fade-in{ animation: fade .5s ease both; }
+  @keyframes fade{ from{opacity:0; transform: translateY(6px);} to{opacity:1; transform:none;} }
+}
+
+/* ===== Responsive tweaks ===== */
+img{ max-width:100%; height:auto; border-radius:12px; }

@@ -1,26 +1,28 @@
-// js/menuburguer.js
-(function(){
-  const btn = document.getElementById('navToggle');
-  const menu = document.getElementById('mobileMenu');
-  if(!btn || !menu) return;
+(function () {
+  function ready(fn){ if(document.readyState!=='loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
 
-  const toggle = () => {
-    const hidden = menu.hasAttribute('hidden');
-    if (hidden) {
-      menu.removeAttribute('hidden');
-      btn.setAttribute('aria-expanded', 'true');
-      btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    } else {
-      menu.setAttribute('hidden', '');
-      btn.setAttribute('aria-expanded', 'false');
-      btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-    }
-  };
+  ready(function () {
+    var btn = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
 
-  btn.addEventListener('click', toggle);
-  document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.hasAttribute('hidden')) toggle();
+    // inicia oculto
+    menu.setAttribute('hidden', 'hidden');
+
+    btn.addEventListener('click', function () {
+      var isHidden = menu.hasAttribute('hidden');
+      if (isHidden) { menu.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+      else { menu.setAttribute('hidden','hidden'); btn.setAttribute('aria-expanded', 'false'); }
+    });
+
+    // cierra al hacer click en cualquier enlace del menú móvil
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { menu.setAttribute('hidden','hidden'); btn.setAttribute('aria-expanded','false'); }
+    });
+
+    // cierra al cambiar a desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 992) { menu.setAttribute('hidden','hidden'); btn.setAttribute('aria-expanded','false'); }
+    });
   });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if (!menu.hasAttribute('hidden')) toggle(); }));
 })();
- 

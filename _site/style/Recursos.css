@@ -1,0 +1,94 @@
+body { background: linear-gradient(180deg, #0f172a 0%, #0b1224 100%); color: #e5e7eb; }
+.card { background:#111827; color:#e5e7eb; border:1px solid rgba(255,255,255,.06); }
+.card-header { background: rgba(251,191,36,.10); border-bottom:1px solid rgba(255,255,255,.08); }
+.list-group-item { background:#0f172a; color:#e5e7eb; border-color: rgba(255,255,255,.08); }
+.nav-tabs .nav-link { color:#e5e7eb; }
+.nav-tabs .nav-link.active { color:#111827; background:#fbbf24; border-color:#fbbf24; }
+.btn-primary { background:#fbbf24; border-color:#fbbf24; color:#111827; font-weight:600; }
+.btn-primary:hover { filter:brightness(1.05); }
+
+
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f1f8ff;
+}
+
+.imagen-lista {
+    height: auto; /* Mantiene la proporción */
+    width: 25px; /* Ajusta esto según tus necesidades */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-right: 5px; /* Añade un pequeño espacio entre el texto y la imagen */
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a ambos extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+
+
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.list-group-item {
+    transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f1f8ff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Listas de recursos (Servicios) */
+.list-group-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.list-group-item > span{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.list-group-item img.imagen-lista{
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+.download-btn.btn{ /* botón compacto */
+  padding: .35rem .65rem;
+  font-weight: 600;
+}
+.card .card-body{ padding: 1rem; }

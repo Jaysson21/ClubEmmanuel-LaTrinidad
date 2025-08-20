@@ -67,3 +67,28 @@ body {
         margin-bottom: 20px;
     }
 }
+
+/* Listas de recursos (Servicios) */
+.list-group-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.list-group-item > span{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.list-group-item img.imagen-lista{
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+.download-btn.btn{ /* botón compacto */
+  padding: .35rem .65rem;
+  font-weight: 600;
+}
+.card .card-body{ padding: 1rem; }

@@ -1,62 +1,19 @@
-<!DOCTYPE html><html lang="es"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acerca | Club Emmanuel</title>
-<link rel="stylesheet" href="style/header-footer.css">
-<link rel="stylesheet" href="style/inicio.css"><!-- si lo usas -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-<link rel="shortcut icon" href="assets/Images/ClubLogo.png">
-</head><body>
-<header class="nav-wrap"><div class="container nav">
-  <a class="brand" href="index.html"><img src="assets/Images/ClubLogo.png" alt=""><span>Club Emmanuel • La Trinidad #1</span></a>
-  <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="Servicios.html">Servicios</a></li><li><a class="active" href="acerca.html" aria-current="page">Acerca</a></li><li><a href="#footer">Contacto</a></li><li><a class="btn-cta" href="Servicios.html">Descargas</a></li></ul>
-  <button class="hamb" id="navToggle" aria-controls="mobileMenu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-</div><nav id="mobileMenu" class="mobile" hidden>
-  <a href="index.html">Inicio</a><a href="Servicios.html">Servicios</a><a class="active" href="acerca.html">Acerca</a><a href="#footer">Contacto</a><a class="btn-cta" href="Servicios.html">Ver recursos</a>
-</nav></header>
+---
+layout: default
+title: Acerca
+---
 
 <main class="container" style="padding:56px 0">
   <h1 class="mb-2"><strong>Quiénes somos</strong></h1>
-  <p style="max-width:65ch">Somos un club de Conquistadores y Aventureros comprometido con formar líderes a través del servicio, la naturaleza y la amistad. Nuestra misión es acompañar a niños, adolescentes y jóvenes a crecer en valores cristianos y habilidades para la vida.</p>
+  <p style="max-width:65ch">
+    Somos un club de Conquistadores y Aventureros comprometido con formar líderes a través del servicio,
+    la naturaleza y la amistad. Nuestra misión es acompañar a niños, adolescentes y jóvenes a crecer en
+    valores cristianos y habilidades para la vida.
+  </p>
+
   <h2 class="mt-4">Misión</h2>
   <p>Guiar a cada miembro a conocer a Jesús, servir a su comunidad y desarrollar un carácter íntegro.</p>
+
   <h2 class="mt-3">Visión</h2>
   <p>Ser una comunidad que inspira a las nuevas generaciones a liderar con propósito.</p>
 </main>
-
-<!-- Footer moderno -->
-<!-- FOOTER -->
-  <footer id="footer" role="contentinfo">
-  <div class="container footer">
-    <div>
-      <span class="badge">Club Emmanuel La Trinidad #1</span>
-      <p class="footer-desc">Recursos y materiales para Conquistadores y Aventureros. Formación, servicio y crecimiento en comunidad.</p>
-      <div class="social">
-        <a href="https://facebook.com/emmanuel.latrinidad.9?mibextid=LQQJ4d" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/emmanuellatrinidad?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://goo.gl/maps/w37dXgodMdayAtKH6" target="_blank" rel="noopener" aria-label="Ubicación en Google Maps"><i class="fas fa-map-marker-alt"></i></a>
-      </div>
-      <div class="footer-address"><p>Dirección: Costado Nor-Oeste Hospital Pedro Altamirano, La Trinidad, Estelí</p></div>
-    </div>
-    <div>
-      <h4>Secciones</h4>
-      <nav aria-label="Secciones del sitio">
-        <div><a class="active" href="index.html">Inicio</a></div>
-        <div><a href="Servicios.html">Servicios</a></div>
-        <div><a href="acerca.html">Acerca</a></div>
-        <div><a href="#footer">Contacto</a></div>
-      </nav>
-    </div>
-    <div>
-      <h4>Atajos</h4>
-      <div><a href="Servicios.html#conquistadores">Conquistadores</a></div>
-      <div><a href="Servicios.html#aventureros">Aventureros</a></div>
-    </div>
-  </div>
-  <div class="container sub">
-    <span>© <span id="year"></span> Jaysson Fley González — Todos los derechos reservados</span>
-    <span>Hecho con ❤️ en Nicaragua</span>
-  </div>
-</footer>
-<script src="js/menuburguer.js"></script>
-<script>document.getElementById('year')&&(document.getElementById('year').textContent=new Date().getFullYear());</script>
-</body></html>

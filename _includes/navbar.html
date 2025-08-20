@@ -1,0 +1,44 @@
+<header class="nav-wrap">
+  <div class="container nav" role="navigation" aria-label="Principal">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Ir al inicio">
+      <img src="{{ '/assets/Images/ClubLogo.png' | relative_url }}" alt="Logo del Club Emmanuel La Trinidad #1">
+      <span>Club Emmanuel • La Trinidad #1</span>
+    </a>
+
+    <ul class="nav-links" role="menubar" aria-label="Enlaces principales">
+      <li>
+        <a class="{% if page.url == '/' %}active{% endif %}"
+           href="{{ '/' | relative_url }}" role="menuitem"
+           aria-current="{% if page.url == '/' %}page{% endif %}">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a class="{% if page.url contains 'Servicios' %}active{% endif %}"
+           href="{{ '/Servicios.html' | relative_url }}" role="menuitem">
+          Servicios
+        </a>
+      </li>
+      <li>
+        <a class="{% if page.url contains 'acerca' %}active{% endif %}"
+           href="{{ '/acerca.html' | relative_url }}" role="menuitem">
+          Acerca
+        </a>
+      </li>
+      <li><a href="#footer" role="menuitem">Contacto</a></li>
+      <li><a class="btn-cta" href="{{ '/Servicios.html' | relative_url }}">Descargas</a></li>
+    </ul>
+
+    <button class="hamb" id="navToggle" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <nav id="mobileMenu" class="mobile" aria-label="Menú móvil" hidden>
+    <a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Inicio</a>
+    <a class="{% if page.url contains 'Servicios' %}active{% endif %}" href="{{ '/Servicios.html' | relative_url }}">Servicios</a>
+    <a class="{% if page.url contains 'acerca' %}active{% endif %}" href="{{ '/acerca.html' | relative_url }}">Acerca</a>
+    <a href="#footer">Contacto</a>
+    <a class="btn-cta" href="{{ '/Servicios.html' | relative_url }}">Ver recursos</a>
+  </nav>
+</header>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="{{ '/style/header-footer.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/style/inicio.css'  | relative_url }}">
+  <link rel="stylesheet" href="{{ '/style/Recursos.css' | relative_url }}">
+  
+  <!-- Neomorfismo: DEBE estar incluido para el fondo -->
+  <link rel="stylesheet" href="{{ '/style/neumorphism.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/style/theme.css' | relative_url }}">
+
+  <style>
+    :root{
+      /* URL procesada por Jekyll, funciona en GitHub Pages y local */
+     --mobile-bg: url('{{ "/assets/Images/bg-mobile.jpeg" | relative_url }}');
+    }
+  </style>
+  <link rel="shortcut icon" href="{{ '/assets/Images/ClubLogo.png' | relative_url }}">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Club Emmanuel La Trinidad #1</title>
+</head>
+<body>
+
+  {% include navbar.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <!-- jQuery + Bootstrap (necesarios para tabs y menú colapsable si usas BS) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scripts del sitio (van al final para que el DOM exista) -->
+  <script src="{{ '/js/menuburguer.js' | relative_url }}"></script>
+  <script src="{{ '/js/boton-carosuel.js' | relative_url }}"></script>
+  <script src="{{ '/js/Recursos.js' | relative_url }}"></script>
+
+  {{ page.extra_js }}
+</body>
+</html>

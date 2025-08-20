@@ -1,73 +1,110 @@
-const carousel = document.querySelector(".carousel"),
-firstImg = carousel.querySelectorAll("img")[0],
-arrowIcons = document.querySelectorAll(".wrapper i");
+(function () {
+  function ready(fn){ if(document.readyState!=='loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
 
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+  ready(function () {
+    var root = document.getElementById('heroCarousel');
+    if (!root) return;
 
-const showHideIcons = () => {
-    // Mostrar u ocultar el icono previo/siguiente según el valor de desplazamiento izquierdo del carrusel
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // obteniendo el ancho máximo desplazable
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
-}
+    var track = root.querySelector('.carousel-track');
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.carousel-slide'));
+    var prev = root.querySelector('.carousel-btn.prev');
+    var next = root.querySelector('.carousel-btn.next');
+    var dots = Array.prototype.slice.call(root.querySelectorAll('.dot'));
 
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; // obteniendo el ancho de la primera imagen y agregando 14 de valor de margen
-        // si el icono clicado es el izquierdo, se resta el valor del ancho desde el desplazamiento izquierdo del carrusel; de lo contrario, se suma
-        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60); // llamando a showHideIcons después de 60ms
-    });
-});
+    var index = 0;
+    var autoplayMs = 3500;   // ⏱ velocidad del auto-play
+    var timer = null;
 
-const autoSlide = () => {
-    // si no hay imágenes restantes para desplazarse, se retorna desde aquí
-    if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+    function goTo(i, opts){
+      index = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-index * 100) + '%)';
 
-    positionDiff = Math.abs(positionDiff); // convirtiendo el valor de positionDiff a positivo
-    let firstImgWidth = firstImg.clientWidth + 14;
-    // obteniendo el valor de diferencia que se debe agregar o restar desde el desplazamiento izquierdo del carrusel para centrar la imagen del medio
-    let valDifference = firstImgWidth - positionDiff;
+      // estado activo
+      slides.forEach(function(s, k){ s.classList.toggle('is-active', k === index); });
+      dots.forEach(function(d, k){
+        var active = (k === index);
+        d.classList.toggle('is-active', active);
+        d.setAttribute('aria-current', active ? 'true' : 'false');
+      });
 
-    if(carousel.scrollLeft > prevScrollLeft) { // si el usuario se desplaza hacia la derecha
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+      if (!opts || !opts.silent) restartAutoplay();
     }
-    // si el usuario se desplaza hacia la izquierda
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-}
 
-const dragStart = (e) => {
-    // actualizando el valor de las variables globales en el evento de clic del ratón
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft;
-}
+    function nextSlide(){ goTo(index + 1); }
+    function prevSlide(){ goTo(index - 1); }
 
-const dragging = (e) => {
-    // desplazando las imágenes/carrusel hacia la izquierda según la posición del ratón
-    if(!isDragStart) return;
-    e.preventDefault();
-    isDragging = true;
-    carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
-}
+    // autoplay
+    function startAutoplay(){
+      stopAutoplay();
+      timer = setInterval(nextSlide, autoplayMs);
+    }
+    function stopAutoplay(){
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+    function restartAutoplay(){ startAutoplay(); }
 
-const dragStop = () => {
-    isDragStart = false;
-    carousel.classList.remove("dragging");
+    // Controles
+    if (prev) prev.addEventListener('click', prevSlide);
+    if (next) next.addEventListener('click', nextSlide);
 
-    if(!isDragging) return;
-    isDragging = false;
-    autoSlide();
-}
+    dots.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var i = parseInt(btn.getAttribute('data-slide'), 10) || 0;
+        goTo(i);
+      });
+    });
 
-carousel.addEventListener("mousedown", dragStart);
-//carousel.addEventListener("touchstart", dragStart);
+    // Pausa al hover / foco (accesible)
+    root.addEventListener('mouseenter', stopAutoplay);
+    root.addEventListener('mouseleave', startAutoplay);
+    root.addEventListener('focusin', stopAutoplay);
+    root.addEventListener('focusout', startAutoplay);
 
-document.addEventListener("mousemove", dragging);
-//carousel.addEventListener("touchmove", dragging);
+    // Swipe / drag
+    var startX = 0, dragging = false, lastX = 0;
+    var viewport = root.querySelector('.carousel-viewport');
 
-document.addEventListener("mouseup", dragStop);
-//carousel.addEventListener("touchend", dragStop);
+    function onStart(x){
+      dragging = true; startX = x; lastX = x;
+      root.classList.add('dragging');
+      stopAutoplay();
+    }
+    function onMove(x){
+      if (!dragging) return;
+      lastX = x;
+      var dx = x - startX;
+      track.style.transform = 'translateX(calc(' + (-index*100) + '% + ' + dx + 'px))';
+    }
+    function onEnd(){
+      if (!dragging) return;
+      dragging = false;
+      root.classList.remove('dragging');
+      var dx = lastX - startX;
+      var threshold = (viewport.clientWidth || 300) * 0.15;
+      if (dx > threshold) prevSlide();
+      else if (dx < -threshold) nextSlide();
+      else goTo(index, { silent:true });
+      startAutoplay();
+    }
+
+    // Pointer/touch/mouse
+    viewport.addEventListener('touchstart', function(e){ onStart(e.touches[0].clientX); }, {passive:true});
+    viewport.addEventListener('touchmove', function(e){ onMove(e.touches[0].clientX); }, {passive:true});
+    viewport.addEventListener('touchend', onEnd);
+
+    viewport.addEventListener('mousedown', function(e){ onStart(e.clientX); });
+    window.addEventListener('mousemove', function(e){ onMove(e.clientX); });
+    window.addEventListener('mouseup', onEnd);
+
+    // Teclado
+    root.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight') { e.preventDefault(); nextSlide(); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); prevSlide(); }
+    });
+
+    // init
+    goTo(0, { silent:true });
+    startAutoplay();
+  });
+})();
