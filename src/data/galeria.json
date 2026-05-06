@@ -1,0 +1,86 @@
+[
+  {
+    "id": "g1",
+    "titulo": "Campamento Anual 2024",
+    "categoria": "Campamentos",
+    "fecha": "Marzo 2024",
+    "imagen": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g2",
+    "titulo": "Investidura de Clases",
+    "categoria": "Investiduras",
+    "fecha": "Diciembre 2023",
+    "imagen": "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g3",
+    "titulo": "Jornada de Servicio Comunitario",
+    "categoria": "Servicio",
+    "fecha": "Mayo 2024",
+    "imagen": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g4",
+    "titulo": "Excursión a la Naturaleza",
+    "categoria": "Campamentos",
+    "fecha": "Junio 2024",
+    "imagen": "https://images.unsplash.com/photo-1487730116645-74489c95b41b?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g5",
+    "titulo": "Reunión Semanal de Aventureros",
+    "categoria": "Reuniones",
+    "fecha": "Agosto 2024",
+    "imagen": "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g6",
+    "titulo": "Especialidad de Nudos",
+    "categoria": "Especialidades",
+    "fecha": "Julio 2024",
+    "imagen": "https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g7",
+    "titulo": "Fogata de Confraternidad",
+    "categoria": "Campamentos",
+    "fecha": "Marzo 2024",
+    "imagen": "https://images.unsplash.com/photo-1475738197999-aa385178c66e?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g8",
+    "titulo": "Visita al Hogar de Ancianos",
+    "categoria": "Servicio",
+    "fecha": "Septiembre 2024",
+    "imagen": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g9",
+    "titulo": "Día de Marchas y Orden Cerrado",
+    "categoria": "Reuniones",
+    "fecha": "Abril 2024",
+    "imagen": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g10",
+    "titulo": "Caminata Ecológica",
+    "categoria": "Campamentos",
+    "fecha": "Octubre 2024",
+    "imagen": "https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g11",
+    "titulo": "Taller de Primeros Auxilios",
+    "categoria": "Especialidades",
+    "fecha": "Febrero 2024",
+    "imagen": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "g12",
+    "titulo": "Investidura de Guías Mayores",
+    "categoria": "Investiduras",
+    "fecha": "Noviembre 2023",
+    "imagen": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop"
+  }
+]

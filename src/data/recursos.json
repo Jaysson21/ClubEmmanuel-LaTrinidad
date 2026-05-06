@@ -1,0 +1,178 @@
+[
+  {
+    "id": "aventureros-abejas-industriosas-libro",
+    "titulo": "Abejas Industriosas",
+    "grupo": "Aventureros",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Abejas Industriosas.",
+    "pdfUrl": "/pdfs/aventureros/libros/06ABEJAS_INDUSTRIOSAS.pdf"
+  },
+  {
+    "id": "aventureros-rayos-de-sol-libro",
+    "titulo": "Rayos de Sol",
+    "grupo": "Aventureros",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Rayos de Sol.",
+    "pdfUrl": "/pdfs/aventureros/libros/07RAYOS_DE_SOL.pdf"
+  },
+  {
+    "id": "aventureros-constructores-libro",
+    "titulo": "Constructores",
+    "grupo": "Aventureros",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Constructores.",
+    "pdfUrl": "/pdfs/aventureros/libros/08CONSTRUCTORES.pdf"
+  },
+  {
+    "id": "aventureros-manos-ayudadoras-libro",
+    "titulo": "Manos Ayudadoras",
+    "grupo": "Aventureros",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Manos Ayudadoras.",
+    "pdfUrl": "/pdfs/aventureros/libros/09MANOSAYUDADORAS.pdf"
+  },
+  {
+    "id": "aventureros-corderito-tarjeta",
+    "titulo": "Tarjeta Corderito",
+    "grupo": "Aventureros",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Corderito.",
+    "pdfUrl": "/pdfs/aventureros/tarjetas/01TARJETA_CORDERITO.pdf"
+  },
+  {
+    "id": "aventureros-abejitas-tarjeta",
+    "titulo": "Tarjeta Abejitas",
+    "grupo": "Aventureros",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Abejitas.",
+    "pdfUrl": "/pdfs/aventureros/tarjetas/03TARJETA_ABEJITAS.pdf"
+  },
+  {
+    "id": "aventureros-rayitos-tarjeta",
+    "titulo": "Tarjeta Rayitos",
+    "grupo": "Aventureros",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Rayitos.",
+    "pdfUrl": "/pdfs/aventureros/tarjetas/04TARJETA_RAYITOS.pdf"
+  },
+  {
+    "id": "aventureros-constructores-tarjeta",
+    "titulo": "Tarjeta Constructores",
+    "grupo": "Aventureros",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Constructores.",
+    "pdfUrl": "/pdfs/aventureros/tarjetas/05TARJETA_CONSTRUCTORES.pdf"
+  },
+  {
+    "id": "aventureros-manos-tarjeta",
+    "titulo": "Tarjeta Manos Ayudadoras",
+    "grupo": "Aventureros",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Manos Ayudadoras.",
+    "pdfUrl": "/pdfs/aventureros/tarjetas/06TARJETA_MANOS.pdf"
+  },
+  {
+    "id": "conquistadores-amigo-libro",
+    "titulo": "Libro Amigo",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Amigo.",
+    "pdfUrl": "/pdfs/conquistadores/libros/1Amigo.pdf"
+  },
+  {
+    "id": "conquistadores-companero-libro",
+    "titulo": "Libro Compañero",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Compañero.",
+    "pdfUrl": "/pdfs/conquistadores/libros/2Compañero.pdf"
+  },
+  {
+    "id": "conquistadores-companero-v2-libro",
+    "titulo": "Libro Compañero v2",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Segunda versión del libro de la clase Compañero.",
+    "pdfUrl": "/pdfs/conquistadores/libros/2Compañerov2.pdf"
+  },
+  {
+    "id": "conquistadores-explorador-libro",
+    "titulo": "Libro Explorador",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Explorador.",
+    "pdfUrl": "/pdfs/conquistadores/libros/3Explorador.pdf"
+  },
+  {
+    "id": "conquistadores-orientador-libro",
+    "titulo": "Libro Orientador",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Orientador.",
+    "pdfUrl": "/pdfs/conquistadores/libros/4Orientador.pdf"
+  },
+  {
+    "id": "conquistadores-viajero-libro",
+    "titulo": "Libro Viajero",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Viajero.",
+    "pdfUrl": "/pdfs/conquistadores/libros/5Viajero.pdf"
+  },
+  {
+    "id": "conquistadores-guia-libro",
+    "titulo": "Libro Guía",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Libro de la clase Guía.",
+    "pdfUrl": "/pdfs/conquistadores/libros/6Guia.pdf"
+  },
+  {
+    "id": "conquistadores-amigo-tarjeta",
+    "titulo": "Tarjeta Amigo",
+    "grupo": "Conquistadores",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Amigo.",
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/1AmigoTarjeta.pdf"
+  },
+  {
+    "id": "conquistadores-companero-tarjeta",
+    "titulo": "Tarjeta Compañero",
+    "grupo": "Conquistadores",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Compañero.",
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/2CompañeroTarjeta.pdf"
+  },
+  {
+    "id": "conquistadores-explorador-tarjeta",
+    "titulo": "Tarjeta Explorador",
+    "grupo": "Conquistadores",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Explorador.",
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/3ExploradorTarjeta.pdf"
+  },
+  {
+    "id": "conquistadores-orientador-tarjeta",
+    "titulo": "Tarjeta Orientador",
+    "grupo": "Conquistadores",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Orientador.",
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/4OrientadorTarjeta.pdf"
+  },
+  {
+    "id": "conquistadores-viajero-tarjeta",
+    "titulo": "Tarjeta Viajero",
+    "grupo": "Conquistadores",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Viajero.",
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/5ViajeroTarjeta.pdf"
+  },
+  {
+    "id": "conquistadores-guia-tarjeta",
+    "titulo": "Tarjeta Guía",
+    "grupo": "Conquistadores",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de la clase Guía.",
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/6GuiaTarjeta.pdf"
+  }
+]
