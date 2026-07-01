@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Tent } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,15 +43,20 @@ export function Navbar() {
   const isActive = (path: string) => location.pathname === path;
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm py-3' : 'bg-white py-5'}`}>
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-white/70 backdrop-blur-md py-5'}`}>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Top Colorful Border */}
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-club-blue" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-1">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-club-blue text-white p-2 rounded-xl group-hover:bg-club-gold transition-colors duration-300">
-              <Tent size={24} strokeWidth={2.5} />
-            </div>
+            <img 
+              src="/images/ClubLogo.png" 
+              alt="Logo Club Emmanuel" 
+              className="w-12 h-12 object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-tight text-club-blue">
                 Club Emmanuel

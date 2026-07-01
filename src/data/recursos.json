@@ -5,7 +5,8 @@
     "grupo": "Aventureros",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Abejas Industriosas.",
-    "pdfUrl": "/pdfs/aventureros/libros/06ABEJAS_INDUSTRIOSAS.pdf"
+    "pdfUrl": "/pdfs/aventureros/libros/06ABEJAS_INDUSTRIOSAS.pdf",
+    "logoUrl": "/images/clases/Aventureros/Abejas Industriosas.png"
   },
   {
     "id": "aventureros-rayos-de-sol-libro",
@@ -13,7 +14,8 @@
     "grupo": "Aventureros",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Rayos de Sol.",
-    "pdfUrl": "/pdfs/aventureros/libros/07RAYOS_DE_SOL.pdf"
+    "pdfUrl": "/pdfs/aventureros/libros/07RAYOS_DE_SOL.pdf",
+    "logoUrl": "/images/clases/Aventureros/Rayos de Sol.png"
   },
   {
     "id": "aventureros-constructores-libro",
@@ -21,7 +23,8 @@
     "grupo": "Aventureros",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Constructores.",
-    "pdfUrl": "/pdfs/aventureros/libros/08CONSTRUCTORES.pdf"
+    "pdfUrl": "/pdfs/aventureros/libros/08CONSTRUCTORES.pdf",
+    "logoUrl": "/images/clases/Aventureros/Contructor.png"
   },
   {
     "id": "aventureros-manos-ayudadoras-libro",
@@ -29,7 +32,8 @@
     "grupo": "Aventureros",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Manos Ayudadoras.",
-    "pdfUrl": "/pdfs/aventureros/libros/09MANOSAYUDADORAS.pdf"
+    "pdfUrl": "/pdfs/aventureros/libros/09MANOSAYUDADORAS.pdf",
+    "logoUrl": "/images/clases/Aventureros/Manos Ayudadoras.png"
   },
   {
     "id": "aventureros-corderito-tarjeta",
@@ -37,7 +41,8 @@
     "grupo": "Aventureros",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Corderito.",
-    "pdfUrl": "/pdfs/aventureros/tarjetas/01TARJETA_CORDERITO.pdf"
+    "pdfUrl": "/pdfs/aventureros/tarjetas/01TARJETA_CORDERITO.pdf",
+    "logoUrl": "/images/clases/Aventureros/Corderitos.png"
   },
   {
     "id": "aventureros-abejitas-tarjeta",
@@ -45,7 +50,8 @@
     "grupo": "Aventureros",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Abejitas.",
-    "pdfUrl": "/pdfs/aventureros/tarjetas/03TARJETA_ABEJITAS.pdf"
+    "pdfUrl": "/pdfs/aventureros/tarjetas/03TARJETA_ABEJITAS.pdf",
+    "logoUrl": "/images/clases/Aventureros/Abejas Industriosas.png"
   },
   {
     "id": "aventureros-rayitos-tarjeta",
@@ -53,7 +59,8 @@
     "grupo": "Aventureros",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Rayitos.",
-    "pdfUrl": "/pdfs/aventureros/tarjetas/04TARJETA_RAYITOS.pdf"
+    "pdfUrl": "/pdfs/aventureros/tarjetas/04TARJETA_RAYITOS.pdf",
+    "logoUrl": "/images/clases/Aventureros/Rayos de Sol.png"
   },
   {
     "id": "aventureros-constructores-tarjeta",
@@ -61,7 +68,8 @@
     "grupo": "Aventureros",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Constructores.",
-    "pdfUrl": "/pdfs/aventureros/tarjetas/05TARJETA_CONSTRUCTORES.pdf"
+    "pdfUrl": "/pdfs/aventureros/tarjetas/05TARJETA_CONSTRUCTORES.pdf",
+    "logoUrl": "/images/clases/Aventureros/Contructor.png"
   },
   {
     "id": "aventureros-manos-tarjeta",
@@ -69,7 +77,8 @@
     "grupo": "Aventureros",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Manos Ayudadoras.",
-    "pdfUrl": "/pdfs/aventureros/tarjetas/06TARJETA_MANOS.pdf"
+    "pdfUrl": "/pdfs/aventureros/tarjetas/06TARJETA_MANOS.pdf",
+    "logoUrl": "/images/clases/Aventureros/Manos Ayudadoras.png"
   },
   {
     "id": "conquistadores-amigo-libro",
@@ -77,7 +86,8 @@
     "grupo": "Conquistadores",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Amigo.",
-    "pdfUrl": "/pdfs/conquistadores/libros/1Amigo.pdf"
+    "pdfUrl": "/pdfs/conquistadores/libros/1Amigo.pdf",
+    "logoUrl": "/images/clases/Conquis/1Amigo.png"
   },
   {
     "id": "conquistadores-companero-libro",
@@ -85,7 +95,8 @@
     "grupo": "Conquistadores",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Compañero.",
-    "pdfUrl": "/pdfs/conquistadores/libros/2Compañero.pdf"
+    "pdfUrl": "/pdfs/conquistadores/libros/2Compañero.pdf",
+    "logoUrl": "/images/clases/Conquis/2Compañero.png"
   },
   {
     "id": "conquistadores-companero-v2-libro",
@@ -93,7 +104,8 @@
     "grupo": "Conquistadores",
     "tipo": "Libro",
     "descripcion": "Segunda versión del libro de la clase Compañero.",
-    "pdfUrl": "/pdfs/conquistadores/libros/2Compañerov2.pdf"
+    "pdfUrl": "/pdfs/conquistadores/libros/2CompañeroV2.pdf",
+    "logoUrl": "/images/clases/Conquis/2Compañero.png"
   },
   {
     "id": "conquistadores-explorador-libro",
@@ -101,7 +113,8 @@
     "grupo": "Conquistadores",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Explorador.",
-    "pdfUrl": "/pdfs/conquistadores/libros/3Explorador.pdf"
+    "pdfUrl": "/pdfs/conquistadores/libros/3Explorador.pdf",
+    "logoUrl": "/images/clases/Conquis/3Explorador.png"
   },
   {
     "id": "conquistadores-orientador-libro",
@@ -109,7 +122,8 @@
     "grupo": "Conquistadores",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Orientador.",
-    "pdfUrl": "/pdfs/conquistadores/libros/4Orientador.pdf"
+    "pdfUrl": "/pdfs/conquistadores/libros/4Orientador.pdf",
+    "logoUrl": "/images/clases/Conquis/4Orientador.png"
   },
   {
     "id": "conquistadores-viajero-libro",
@@ -117,7 +131,8 @@
     "grupo": "Conquistadores",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Viajero.",
-    "pdfUrl": "/pdfs/conquistadores/libros/5Viajero.pdf"
+    "pdfUrl": "/pdfs/conquistadores/libros/5Viajero.pdf",
+    "logoUrl": "/images/clases/Conquis/5Viajero.png"
   },
   {
     "id": "conquistadores-guia-libro",
@@ -125,7 +140,8 @@
     "grupo": "Conquistadores",
     "tipo": "Libro",
     "descripcion": "Libro de la clase Guía.",
-    "pdfUrl": "/pdfs/conquistadores/libros/6Guia.pdf"
+    "pdfUrl": "/pdfs/conquistadores/libros/6Guia.pdf",
+    "logoUrl": "/images/clases/Conquis/6Guia.png"
   },
   {
     "id": "conquistadores-amigo-tarjeta",
@@ -133,7 +149,8 @@
     "grupo": "Conquistadores",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Amigo.",
-    "pdfUrl": "/pdfs/conquistadores/tarjetas/1AmigoTarjeta.pdf"
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/1AmigoTarjeta.pdf",
+    "logoUrl": "/images/clases/Conquis/1Amigo.png"
   },
   {
     "id": "conquistadores-companero-tarjeta",
@@ -141,7 +158,8 @@
     "grupo": "Conquistadores",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Compañero.",
-    "pdfUrl": "/pdfs/conquistadores/tarjetas/2CompañeroTarjeta.pdf"
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/2CompañeroTarjeta.pdf",
+    "logoUrl": "/images/clases/Conquis/2Compañero.png"
   },
   {
     "id": "conquistadores-explorador-tarjeta",
@@ -149,7 +167,8 @@
     "grupo": "Conquistadores",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Explorador.",
-    "pdfUrl": "/pdfs/conquistadores/tarjetas/3ExploradorTarjeta.pdf"
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/3ExploradorTarjeta.pdf",
+    "logoUrl": "/images/clases/Conquis/3Explorador.png"
   },
   {
     "id": "conquistadores-orientador-tarjeta",
@@ -157,7 +176,8 @@
     "grupo": "Conquistadores",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Orientador.",
-    "pdfUrl": "/pdfs/conquistadores/tarjetas/4OrientadorTarjeta.pdf"
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/4OrientadorTarjeta.pdf",
+    "logoUrl": "/images/clases/Conquis/4Orientador.png"
   },
   {
     "id": "conquistadores-viajero-tarjeta",
@@ -165,7 +185,8 @@
     "grupo": "Conquistadores",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Viajero.",
-    "pdfUrl": "/pdfs/conquistadores/tarjetas/5ViajeroTarjeta.pdf"
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/5ViajeroTarjeta.pdf",
+    "logoUrl": "/images/clases/Conquis/5Viajero.png"
   },
   {
     "id": "conquistadores-guia-tarjeta",
@@ -173,6 +194,7 @@
     "grupo": "Conquistadores",
     "tipo": "Tarjeta",
     "descripcion": "Tarjeta de la clase Guía.",
-    "pdfUrl": "/pdfs/conquistadores/tarjetas/6GuiaTarjeta.pdf"
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/6GuiaTarjeta.pdf",
+    "logoUrl": "/images/clases/Conquis/6Guia.png"
   }
 ]

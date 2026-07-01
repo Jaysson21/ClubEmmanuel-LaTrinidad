@@ -11,14 +11,14 @@
     "titulo": "Investidura de Clases",
     "categoria": "Investiduras",
     "fecha": "Diciembre 2023",
-    "imagen": "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "/images/galeria/1.jpg"
   },
   {
     "id": "g3",
     "titulo": "Jornada de Servicio Comunitario",
     "categoria": "Servicio",
     "fecha": "Mayo 2024",
-    "imagen": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "/images/galeria/3.jpg"
   },
   {
     "id": "g4",
@@ -32,7 +32,7 @@
     "titulo": "Reunión Semanal de Aventureros",
     "categoria": "Reuniones",
     "fecha": "Agosto 2024",
-    "imagen": "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "/images/galeria/5.jpg"
   },
   {
     "id": "g6",
@@ -46,28 +46,28 @@
     "titulo": "Fogata de Confraternidad",
     "categoria": "Campamentos",
     "fecha": "Marzo 2024",
-    "imagen": "https://images.unsplash.com/photo-1475738197999-aa385178c66e?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=1200&auto=format&fit=crop"
   },
   {
     "id": "g8",
     "titulo": "Visita al Hogar de Ancianos",
     "categoria": "Servicio",
     "fecha": "Septiembre 2024",
-    "imagen": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "/images/galeria/7.png"
   },
   {
     "id": "g9",
     "titulo": "Día de Marchas y Orden Cerrado",
     "categoria": "Reuniones",
     "fecha": "Abril 2024",
-    "imagen": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "/images/galeria/8.jpg"
   },
   {
     "id": "g10",
     "titulo": "Caminata Ecológica",
     "categoria": "Campamentos",
     "fecha": "Octubre 2024",
-    "imagen": "https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1200&auto=format&fit=crop"
   },
   {
     "id": "g11",
@@ -81,6 +81,6 @@
     "titulo": "Investidura de Guías Mayores",
     "categoria": "Investiduras",
     "fecha": "Noviembre 2023",
-    "imagen": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop"
+    "imagen": "/images/galeria/Premios.jpg"
   }
 ]

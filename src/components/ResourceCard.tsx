@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Download, Eye, BookOpen, CreditCard } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -9,6 +9,7 @@ export interface Resource {
   tipo: 'Libro' | 'Tarjeta';
   descripcion: string;
   pdfUrl: string;
+  logoUrl?: string;
 }
 
 interface ResourceCardProps {
@@ -69,7 +70,9 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
             isLibro ? 'bg-blue-50 text-club-blue' : 'bg-amber-50 text-amber-600'
           }`}
         >
-          {isLibro ? (
+          {resource.logoUrl ? (
+            <img src={resource.logoUrl} alt={`Logo ${resource.titulo}`} className="w-8 h-8 object-contain" />
+          ) : isLibro ? (
             <BookOpen size={24} strokeWidth={2} />
           ) : (
             <CreditCard size={24} strokeWidth={2} />

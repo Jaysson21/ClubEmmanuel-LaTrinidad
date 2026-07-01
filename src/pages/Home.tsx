@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -113,9 +113,11 @@ export function Home() {
               className="bg-white rounded-3xl p-8 shadow-soft border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
 
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500" />
-              <div className="w-16 h-16 bg-club-blue/10 text-club-blue rounded-2xl flex items-center justify-center mb-6">
-                <Users size={32} strokeWidth={2} />
-              </div>
+              <img 
+                src="/images/Aventureros.png" 
+                alt="Logo Aventureros" 
+                className="w-24 h-24 object-contain mb-4 drop-shadow-sm group-hover:scale-105 transition-transform duration-300" 
+              />
               <h3 className="text-2xl font-bold text-slate-800 mb-3">
                 Aventureros
               </h3>
@@ -170,9 +172,11 @@ export function Home() {
               className="bg-white rounded-3xl p-8 shadow-soft border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
 
               <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500" />
-              <div className="w-16 h-16 bg-club-gold/20 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                <Compass size={32} strokeWidth={2} />
-              </div>
+              <img 
+                src="/images/conquistadore-logo.png" 
+                alt="Logo Conquistadores" 
+                className="w-24 h-24 object-contain mb-4 drop-shadow-sm group-hover:scale-105 transition-transform duration-300" 
+              />
               <h3 className="text-2xl font-bold text-slate-800 mb-3">
                 Conquistadores
               </h3>
@@ -211,9 +215,13 @@ export function Home() {
       </section>
 
       {/* Mission Brief */}
-      <section className="py-20 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-slate-100">
+      <section className="relative py-20 overflow-hidden bg-slate-50">
+        {/* Decorative Blur Backgrounds */}
+        <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-gradient-to-br from-white to-slate-50/80 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-slate-200/60 shadow-sm">
             <div className="flex-1 space-y-6">
               <h2 className="text-3xl font-bold text-slate-800">
                 Nuestra Misión
@@ -248,7 +256,7 @@ export function Home() {
               <img
                 src="/images/ClubLogo.png"
                 alt="Logo Club Emmanuel La Trinidad"
-                className="w-40 h-40 object-contain relative z-10"
+                className="w-64 h-64 object-contain relative z-10"
               />
             </div>
           </div>

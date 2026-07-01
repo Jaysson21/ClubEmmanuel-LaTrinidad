@@ -1,4 +1,4 @@
-import React, { useMemo, useState, lazy } from 'react';
+import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Camera,
@@ -41,8 +41,12 @@ export function Galeria() {
     setSelectedIndex((selectedIndex - 1 + filtered.length) % filtered.length);
   };
   return (
-    <div className="min-h-screen pt-28 pb-20 bg-club-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-28 pb-20 bg-slate-50 relative overflow-hidden">
+      {/* Decorative Blur Backgrounds */}
+      <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="mb-10 max-w-2xl">
           <div className="inline-flex items-center gap-2 bg-club-gold/10 text-amber-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">

@@ -3,14 +3,50 @@ import { MapPin, MessageCircle, Mail, Send, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 export function Contacto() {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setIsSubmitting(true);
+    
+    const formData = new FormData(e.currentTarget);
+    // TODO: Reemplazar con la Access Key real de Web3Forms
+    formData.append("access_key", "TU_ACCESS_KEY_AQUI");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      });
+      const data = await res.json();
+      if (data.success) {
+        setIsSubmitted(true);
+        setTimeout(() => setIsSubmitted(false), 5000);
+        e.currentTarget.reset();
+      } else {
+        alert("Hubo un error al enviar el mensaje. Intenta de nuevo.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Hubo un error de conexión.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return (
-    <div className="min-h-screen pt-28 pb-20 bg-club-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-28 pb-20 bg-slate-50 relative overflow-hidden">
+      {/* Decorative Blur Backgrounds */}
+      <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h1 className="text-4xl font-extrabold text-slate-800 mb-4">
             Contáctanos
@@ -27,10 +63,10 @@ export function Contacto() {
             {/* Contact Cards */}
             <div className="grid sm:grid-cols-2 gap-4">
               <a
-                href="https://wa.me/50500000000"
+                href="https://wa.me/50582345810"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-green-200 hover:shadow-md transition-all group flex flex-col items-center text-center">
+                className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-green-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center">
                 
                 <div className="w-12 h-12 bg-green-50 text-green-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <MessageCircle size={24} />
@@ -42,15 +78,15 @@ export function Contacto() {
               </a>
 
               <a
-                href="mailto:contacto@clubemmanuel.org"
-                className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all group flex flex-col items-center text-center">
+                href="mailto:jeysonfley@gmail.com"
+                className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center">
                 
                 <div className="w-12 h-12 bg-blue-50 text-club-blue rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Mail size={24} />
                 </div>
                 <h3 className="font-bold text-slate-800 mb-1">Correo</h3>
                 <p className="text-sm text-slate-500">
-                  contacto@clubemmanuel.org
+                  jeysonfley@gmail.com
                 </p>
               </a>
             </div>
@@ -137,6 +173,7 @@ export function Contacto() {
                   <input
                   type="text"
                   id="nombre"
+                  name="nombre"
                   required
                   className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-club-blue/20 focus:border-club-blue transition-all"
                   placeholder="Ej. Juan Pérez" />
@@ -153,6 +190,7 @@ export function Contacto() {
                   <input
                   type="text"
                   id="email"
+                  name="email"
                   required
                   className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-club-blue/20 focus:border-club-blue transition-all"
                   placeholder="Para poder responderte" />
@@ -168,6 +206,7 @@ export function Contacto() {
                   </label>
                   <textarea
                   id="mensaje"
+                  name="mensaje"
                   rows={4}
                   required
                   className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-club-blue/20 focus:border-club-blue transition-all resize-none"
@@ -177,10 +216,11 @@ export function Contacto() {
 
                 <button
                 type="submit"
-                className="w-full bg-club-blue hover:bg-blue-800 text-white font-bold py-3.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+                disabled={isSubmitting}
+                className="w-full bg-club-blue hover:bg-blue-800 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
                 
                   <Send size={18} />
-                  Enviar mensaje
+                  {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
                 </button>
               </form>
             }

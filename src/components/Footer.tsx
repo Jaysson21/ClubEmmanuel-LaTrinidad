@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Phone, Tent, Heart } from 'lucide-react';
+import { MapPin, Mail, Phone, Heart } from 'lucide-react';
 export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
