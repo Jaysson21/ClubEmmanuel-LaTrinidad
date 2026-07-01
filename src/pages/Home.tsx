@@ -81,7 +81,7 @@ export function Home() {
       </section>
 
       {/* Groups Section */}
-      <section className="py-20 bg-club-light relative -mt-8 rounded-t-[2.5rem] z-20">
+      <section className="pt-20 pb-10 bg-club-light relative -mt-8 rounded-t-[2.5rem] z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-club-dark mb-4">
@@ -215,7 +215,7 @@ export function Home() {
       </section>
 
       {/* Mission Brief */}
-      <section className="relative py-20 overflow-hidden bg-slate-50">
+      <section className="relative pt-10 pb-20 overflow-hidden bg-slate-50">
         {/* Decorative Blur Backgrounds */}
         <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
@@ -252,11 +252,11 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/3 aspect-square bg-transparent rounded-2xl flex items-center justify-center relative overflow-hidden">
+            <div className="w-full md:w-1/3 flex items-center justify-center relative">
               <img
                 src="/images/ClubLogo.png"
                 alt="Logo Club Emmanuel La Trinidad"
-                className="w-64 h-64 object-contain relative z-10"
+                className="w-48 h-48 md:w-64 md:h-64 object-contain relative z-10"
               />
             </div>
           </div>

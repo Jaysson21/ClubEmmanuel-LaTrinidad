@@ -14,6 +14,14 @@ export function App() {
   return (
     <Router>
       <ScrollToTop />
+      {/* Fondo global traslúcido solo para móviles */}
+      <div className="fixed inset-0 z-[-1] block md:hidden pointer-events-none">
+        <img 
+          src="/images/bg-mobile.jpeg" 
+          alt="Fondo" 
+          className="w-full h-full object-cover opacity-10 mix-blend-multiply"
+        />
+      </div>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">

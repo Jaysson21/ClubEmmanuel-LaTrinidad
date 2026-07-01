@@ -66,12 +66,14 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
       {/* Header: Icon & Badges */}
       <div className="flex justify-between items-start mb-4">
         <div
-          className={`p-3 rounded-xl ${
-            isLibro ? 'bg-blue-50 text-club-blue' : 'bg-amber-50 text-amber-600'
+          className={`shrink-0 flex items-center justify-center overflow-hidden ${
+            resource.logoUrl
+              ? 'w-14 h-14 rounded-full shadow-sm border border-slate-100 bg-white'
+              : `w-12 h-12 rounded-xl ${isLibro ? 'bg-blue-50 text-club-blue' : 'bg-amber-50 text-amber-600'}`
           }`}
         >
           {resource.logoUrl ? (
-            <img src={resource.logoUrl} alt={`Logo ${resource.titulo}`} className="w-8 h-8 object-contain" />
+            <img src={resource.logoUrl} alt={`Logo ${resource.titulo}`} className="w-full h-full object-cover" />
           ) : isLibro ? (
             <BookOpen size={24} strokeWidth={2} />
           ) : (

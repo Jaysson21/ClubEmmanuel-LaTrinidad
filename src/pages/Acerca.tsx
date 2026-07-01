@@ -115,7 +115,7 @@ export function Acerca() {
   const [activeTab, setActiveTab] = useState(ideales[0].id);
 
   return (
-    <div className="min-h-screen pt-28 pb-20 bg-slate-50 relative overflow-hidden">
+    <div className="min-h-screen pt-28 pb-20 bg-transparent md:bg-slate-50 relative overflow-hidden">
       {/* Decorative Blur Backgrounds */}
       <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
