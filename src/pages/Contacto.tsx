@@ -1,27 +1,35 @@
 import React, { useState } from 'react';
 import { MapPin, MessageCircle, Mail, Send, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useToast } from '../components/Toast';
 export function Contacto() {
+  const { showToast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    const formData = new FormData(e.currentTarget);
-    // TODO: Reemplazar con la Access Key real de Web3Forms
-    formData.append("access_key", "TU_ACCESS_KEY_AQUI");
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
+    if (!accessKey) {
+      showToast('El formulario aún no está configurado. Escríbenos por WhatsApp o correo.', 'error');
+      return;
+    }
+
+    const form = e.currentTarget;
+    setIsSubmitting(true);
+
+    const formData = new FormData(form);
+    formData.append('access_key', accessKey);
+
+    const json = JSON.stringify(Object.fromEntries(formData));
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
         },
         body: json
       });
@@ -29,13 +37,14 @@ export function Contacto() {
       if (data.success) {
         setIsSubmitted(true);
         setTimeout(() => setIsSubmitted(false), 5000);
-        e.currentTarget.reset();
+        form.reset();
+        showToast('¡Mensaje enviado! Te responderemos pronto.', 'success');
       } else {
-        alert("Hubo un error al enviar el mensaje. Intenta de nuevo.");
+        showToast('Hubo un error al enviar el mensaje. Intenta de nuevo.', 'error');
       }
     } catch (error) {
       console.error(error);
-      alert("Hubo un error de conexión.");
+      showToast('Hubo un error de conexión. Revisa tu internet.', 'error');
     } finally {
       setIsSubmitting(false);
     }

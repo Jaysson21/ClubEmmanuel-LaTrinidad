@@ -1,6 +1,7 @@
 
 import { Download, Eye, BookOpen, CreditCard } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useToast } from './Toast';
 
 export interface Resource {
   id: string;
@@ -18,6 +19,7 @@ interface ResourceCardProps {
 }
 
 export function ResourceCard({ resource, index }: ResourceCardProps) {
+  const { showToast } = useToast();
   const isConquistador = resource.grupo === 'Conquistadores';
   const isLibro = resource.tipo === 'Libro';
 
@@ -41,9 +43,11 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
 
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
+
+      showToast(`Descargando "${resource.titulo}"`, 'success');
     } catch (error) {
       console.error(error);
-      alert(`No se pudo descargar ${resource.titulo}`);
+      showToast(`No se pudo descargar ${resource.titulo}`, 'error');
     }
   };
 

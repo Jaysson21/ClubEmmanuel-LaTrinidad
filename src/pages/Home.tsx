@@ -2,8 +2,6 @@
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  Compass,
-  Users,
   Map,
   HeartHandshake,
   Leaf

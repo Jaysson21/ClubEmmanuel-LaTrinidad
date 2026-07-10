@@ -8,13 +8,14 @@ import {
   Target,
   Eye,
   BookOpen,
-  Award,
   Shield,
   Star,
   Quote } from
 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Emblema } from '../components/Emblema';
+import { ClasesTimeline } from '../components/ClasesTimeline';
 export function Acerca() {
   const values = [
   {
@@ -319,6 +320,12 @@ export function Acerca() {
             </div>
           </div>
         </div>
+
+        {/* Emblema */}
+        <Emblema />
+
+        {/* Clases progresivas */}
+        <ClasesTimeline />
 
       </div>
     </div>);
