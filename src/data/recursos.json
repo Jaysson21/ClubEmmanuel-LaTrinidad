@@ -144,6 +144,15 @@
     "logoUrl": "/images/clases/Conquis/6Guia.png"
   },
   {
+    "id": "conquistadores-guia-mayor-libro",
+    "titulo": "Carpeta de Guía Mayor",
+    "grupo": "Conquistadores",
+    "tipo": "Libro",
+    "descripcion": "Carpeta de trabajo de Guía Mayor con los requisitos de 2015 para formación, liderazgo, discipulado y servicio.",
+    "pdfUrl": "/pdfs/conquistadores/libros/7GuiaMayor.pdf",
+    "logoUrl": "/images/clases/Conquis/7GuiaMayor.png"
+  },
+  {
     "id": "conquistadores-amigo-tarjeta",
     "titulo": "Tarjeta Amigo",
     "grupo": "Conquistadores",
@@ -196,5 +205,22 @@
     "descripcion": "Tarjeta de la clase Guía.",
     "pdfUrl": "/pdfs/conquistadores/tarjetas/6GuiaTarjeta.pdf",
     "logoUrl": "/images/clases/Conquis/6Guia.png"
+  },
+  {
+    "id": "conquistadores-guia-mayor-tarjeta",
+    "titulo": "Tarjeta Guía Mayor",
+    "grupo": "Conquistadores",
+    "tipo": "Tarjeta",
+    "descripcion": "Tarjeta de requisitos para la formación de Guía Mayor.",
+    "pdfUrl": "/pdfs/conquistadores/tarjetas/7GuiaMayorTarjeta.pdf"
+  },
+  {
+    "id": "manual-iglesia-2025-libro",
+    "titulo": "Manual de la Iglesia — Revisión 2025",
+    "grupo": "Club del Libro",
+    "tipo": "Libro",
+    "descripcion": "Décima edición revisada en 2025 del Manual de la Iglesia Adventista del Séptimo Día.",
+    "pdfUrl": "/pdfs/club-del-libro/Manual-Iglesia2025.pdf",
+    "logoUrl": "/images/club-del-libro/Manual-Iglesia.png"
   }
 ]

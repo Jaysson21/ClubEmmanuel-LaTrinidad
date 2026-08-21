@@ -1,13 +1,15 @@
 
-import { Download, Eye, BookOpen, CreditCard } from 'lucide-react';
+import { Download, Eye, BookOpen, CreditCard, Library } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useToast } from './Toast';
+
+export type ResourceTipo = 'Libro' | 'Tarjeta';
 
 export interface Resource {
   id: string;
   titulo: string;
-  grupo: 'Conquistadores' | 'Aventureros';
-  tipo: 'Libro' | 'Tarjeta';
+  grupo: 'Conquistadores' | 'Aventureros' | 'Club del Libro';
+  tipo: ResourceTipo;
   descripcion: string;
   pdfUrl: string;
   logoUrl?: string;
@@ -22,6 +24,7 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
   const { showToast } = useToast();
   const isConquistador = resource.grupo === 'Conquistadores';
   const isLibro = resource.tipo === 'Libro';
+  const isClubDelLibro = resource.grupo === 'Club del Libro';
 
   const handleDownload = async () => {
     try {
@@ -73,11 +76,13 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
           className={`shrink-0 flex items-center justify-center overflow-hidden ${
             resource.logoUrl
               ? 'w-14 h-14 rounded-full shadow-sm border border-slate-100 bg-white'
-              : `w-12 h-12 rounded-xl ${isLibro ? 'bg-blue-50 text-club-blue' : 'bg-amber-50 text-amber-600'}`
+              : `w-12 h-12 rounded-xl ${isClubDelLibro ? 'bg-purple-50 text-purple-600' : isLibro ? 'bg-blue-50 text-club-blue' : 'bg-amber-50 text-amber-600'}`
           }`}
         >
           {resource.logoUrl ? (
             <img src={resource.logoUrl} alt={`Logo ${resource.titulo}`} className="w-full h-full object-cover" />
+          ) : isClubDelLibro ? (
+            <Library size={24} strokeWidth={2} />
           ) : isLibro ? (
             <BookOpen size={24} strokeWidth={2} />
           ) : (
@@ -90,7 +95,9 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
             className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
               isConquistador
                 ? 'bg-club-gold/10 text-amber-700'
-                : 'bg-club-blue/10 text-club-blue'
+                : isClubDelLibro
+                  ? 'bg-purple-50 text-purple-700'
+                  : 'bg-club-blue/10 text-club-blue'
             }`}
           >
             {resource.grupo}

@@ -4,32 +4,44 @@ import { Search, Filter, FileQuestion } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ResourceCard, Resource } from '../components/ResourceCard';
 import recursosData from '../data/recursos.json';
-type FilterType =
-'Todos' |
-'Conquistadores' |
-'Aventureros' |
-'Libros' |
-'Tarjetas';
+const GRUPOS = ['Todos', 'Conquistadores', 'Aventureros', 'Club del Libro'] as const;
+type GrupoFilter = (typeof GRUPOS)[number];
+
+const TIPOS = ['Todos', 'Libro', 'Tarjeta'] as const;
+type TipoFilter = (typeof TIPOS)[number];
+
+const tipoLabels: Record<TipoFilter, string> = {
+  Todos: 'Todos',
+  Libro: 'Libros',
+  Tarjeta: 'Tarjetas'
+};
+
 export function Recursos() {
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeFilter, setActiveFilter] = useState<FilterType>('Todos');
+  const [activeGrupo, setActiveGrupo] = useState<GrupoFilter>('Todos');
+  const [activeTipo, setActiveTipo] = useState<TipoFilter>('Todos');
   const [resources, setResources] = useState<Resource[]>([]);
   // Initialize data and handle URL query params
   useEffect(() => {
     setResources(recursosData as Resource[]);
     const params = new URLSearchParams(location.search);
     const grupoParam = params.get('grupo');
-    if (grupoParam === 'Conquistadores' || grupoParam === 'Aventureros') {
-      setActiveFilter(grupoParam);
-    }
+    setActiveGrupo(
+      grupoParam === 'Conquistadores' ||
+      grupoParam === 'Aventureros' ||
+      grupoParam === 'Club del Libro'
+        ? grupoParam
+        : 'Todos'
+    );
+
+    const tipoParam = params.get('tipo');
+    setActiveTipo(
+      tipoParam === 'Libro' || tipoParam === 'Tarjeta'
+        ? tipoParam
+        : 'Todos'
+    );
   }, [location]);
-  const filters: FilterType[] = [
-  'Todos',
-  'Conquistadores',
-  'Aventureros',
-  'Libros',
-  'Tarjetas'];
 
   const filteredResources = useMemo(() => {
     return resources.filter((resource) => {
@@ -40,18 +52,15 @@ export function Recursos() {
       resource.descripcion.toLowerCase().includes(query) ||
       resource.grupo.toLowerCase().includes(query) ||
       resource.tipo.toLowerCase().includes(query);
-      // 2. Apply Filter
-      let matchesFilter = true;
-      if (activeFilter === 'Conquistadores')
-      matchesFilter = resource.grupo === 'Conquistadores';
-      if (activeFilter === 'Aventureros')
-      matchesFilter = resource.grupo === 'Aventureros';
-      if (activeFilter === 'Libros') matchesFilter = resource.tipo === 'Libro';
-      if (activeFilter === 'Tarjetas')
-      matchesFilter = resource.tipo === 'Tarjeta';
-      return matchesSearch && matchesFilter;
+      // 2. Apply both filters
+      const matchesGrupo =
+      activeGrupo === 'Todos' || resource.grupo === activeGrupo;
+      const matchesTipo =
+      activeTipo === 'Todos' || resource.tipo === activeTipo;
+
+      return matchesSearch && matchesGrupo && matchesTipo;
     });
-  }, [resources, searchQuery, activeFilter]);
+  }, [resources, searchQuery, activeGrupo, activeTipo]);
   return (
     <div className="min-h-screen pt-28 pb-20 bg-transparent md:bg-slate-50 relative overflow-hidden">
       {/* Decorative Blur Backgrounds */}
@@ -65,8 +74,8 @@ export function Recursos() {
             Biblioteca de Recursos
           </h1>
           <p className="text-slate-600 text-lg max-w-2xl">
-            Encuentra manuales, tarjetas de clase, especialidades y materiales
-            de apoyo para el desarrollo de las actividades del club.
+            Encuentra libros, tarjetas de clase y materiales del Club del
+            Libro para el desarrollo de las actividades del club.
           </p>
         </div>
 
@@ -86,19 +95,41 @@ export function Recursos() {
             
           </div>
 
-          {/* Filter Chips */}
+          {/* Filter Chips: Group */}
           <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-            <div className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mr-2">
-              <Filter size={16} /> Filtros:
+            <div className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mr-2 sm:w-28 shrink-0">
+              <Filter size={16} /> Grupo:
             </div>
             <div className="flex flex-wrap gap-2">
-              {filters.map((filter) =>
+              {GRUPOS.map((grupo) =>
               <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeFilter === filter ? 'bg-club-blue text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                key={grupo}
+                type="button"
+                aria-pressed={activeGrupo === grupo}
+                onClick={() => setActiveGrupo(grupo)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeGrupo === grupo ? 'bg-club-blue text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                 
-                  {filter}
+                  {grupo}
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Filter Chips: Category */}
+          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+            <div className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mr-2 sm:w-28 shrink-0">
+              <Filter size={16} /> Categoría:
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {TIPOS.map((tipo) =>
+              <button
+                key={tipo}
+                type="button"
+                aria-pressed={activeTipo === tipo}
+                onClick={() => setActiveTipo(tipo)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeTipo === tipo ? 'bg-club-gold text-club-dark shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+
+                  {tipoLabels[tipo]}
                 </button>
               )}
             </div>
@@ -141,7 +172,8 @@ export function Recursos() {
             <button
             onClick={() => {
               setSearchQuery('');
-              setActiveFilter('Todos');
+              setActiveGrupo('Todos');
+              setActiveTipo('Todos');
             }}
             className="mt-6 text-club-blue font-semibold hover:underline">
             
