@@ -4,9 +4,9 @@ import { MapPin, Mail, Phone, Heart } from 'lucide-react';
 export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-club-dark text-slate-300 pt-16 pb-8">
+    <footer className="bg-club-dark text-slate-300 pt-12 md:pt-16 pb-[max(2rem,env(safe-area-inset-bottom))]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12 mb-10 md:mb-12">
           {/* Brand & Mission */}
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-white mb-6">
@@ -35,14 +35,14 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+            <h3 className="text-white font-semibold mb-4 md:mb-6 uppercase tracking-wider text-sm">
               Enlaces Rápidos
             </h3>
-            <ul className="space-y-3">
+            <ul className="-my-1">
               <li>
                 <Link
                   to="/"
-                  className="text-sm hover:text-club-gold transition-colors">
+                  className="inline-flex items-center min-h-11 text-sm hover:text-club-gold transition-colors">
                   
                   Inicio
                 </Link>
@@ -50,7 +50,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/recursos"
-                  className="text-sm hover:text-club-gold transition-colors">
+                  className="inline-flex items-center min-h-11 text-sm hover:text-club-gold transition-colors">
                   
                   Biblioteca de Recursos
                 </Link>
@@ -58,7 +58,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/galeria"
-                  className="text-sm hover:text-club-gold transition-colors">
+                  className="inline-flex items-center min-h-11 text-sm hover:text-club-gold transition-colors">
                   
                   Galería de Actividades
                 </Link>
@@ -66,7 +66,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/acerca"
-                  className="text-sm hover:text-club-gold transition-colors">
+                  className="inline-flex items-center min-h-11 text-sm hover:text-club-gold transition-colors">
                   
                   Quiénes Somos
                 </Link>
@@ -74,7 +74,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/contacto"
-                  className="text-sm hover:text-club-gold transition-colors">
+                  className="inline-flex items-center min-h-11 text-sm hover:text-club-gold transition-colors">
                   
                   Contacto
                 </Link>
@@ -84,7 +84,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">
+            <h3 className="text-white font-semibold mb-4 md:mb-6 uppercase tracking-wider text-sm">
               Contacto
             </h3>
             <ul className="space-y-4">
@@ -98,7 +98,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-club-gold shrink-0" />
-                <a href="tel:+50582345810" className="text-sm hover:text-club-gold transition-colors">
+                <a href="tel:+50582345810" className="inline-flex items-center min-h-11 text-sm hover:text-club-gold transition-colors">
                   +505 8234-5810
                 </a>
               </li>
@@ -112,11 +112,11 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-400 text-center md:text-left">
             &copy; {currentYear} Club Emmanuel La Trinidad #1. Todos los
             derechos reservados. Jaysson Fley
           </p>
-          <p className="text-xs text-slate-500 flex items-center gap-1">
+          <p className="text-xs text-slate-400 flex items-center gap-1">
             Hecho con <Heart size={12} className="text-red-500 fill-red-500" />{' '}
             para el ministerio juvenil
           </p>

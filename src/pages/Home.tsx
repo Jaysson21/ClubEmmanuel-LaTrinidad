@@ -10,7 +10,7 @@ import {
 import { motion } from 'framer-motion';
 export function Home() {
   return (
-    <div className="flex flex-col min-h-screen pt-20">
+    <div className="flex flex-col min-h-dvh pt-20">
       {/* Hero Section */}
       <section className="relative bg-club-blue overflow-hidden">
         {/* Decorative background elements */}
@@ -27,10 +27,10 @@ export function Home() {
 
           </svg>
         </div>
-        <div className="absolute -right-20 -top-20 w-96 h-96 bg-club-gold rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute -left-20 top-20 w-72 h-72 bg-club-green rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
+        <div className="hidden md:block absolute -right-20 -top-20 w-96 h-96 bg-club-gold rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
+        <div className="hidden md:block absolute -left-20 top-20 w-72 h-72 bg-club-green rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 pb-20 sm:py-24 lg:py-32">
           <div className="max-w-3xl">
             <motion.div
               initial={{
@@ -45,30 +45,30 @@ export function Home() {
                 duration: 0.6
               }}>
 
-              <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-club-gold text-sm font-semibold tracking-wider mb-6 border border-white/20">
+              <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-club-gold text-xs sm:text-sm font-semibold tracking-wider mb-5 sm:mb-6 border border-white/20">
                 CLUB EMMANUEL • LA TRINIDAD #1
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+              <h1 className="text-[2.25rem] sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-5 sm:mb-6 text-balance">
                 Recursos para crecer en{' '}
                 <span className="text-club-gold">fe</span>,{' '}
                 <span className="text-club-green">servicio</span> y amistad
               </h1>
-              <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-8 sm:mb-10 max-w-2xl leading-relaxed">
                 Biblioteca digital de libros, tarjetas y materiales para el
                 desarrollo físico, mental y espiritual de nuestros
                 Conquistadores y Aventureros.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   to="/recursos"
-                  className="bg-club-gold hover:bg-yellow-500 text-club-dark px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                  className="bg-club-gold hover:bg-yellow-500 active:bg-yellow-500 text-club-dark px-8 min-h-14 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
 
                   Ver recursos <ArrowRight size={20} />
                 </Link>
                 <Link
                   to="/acerca"
-                  className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center backdrop-blur-sm">
+                  className="bg-white/10 hover:bg-white/20 active:bg-white/20 text-white border border-white/20 px-8 min-h-14 rounded-xl font-bold text-lg transition-all duration-200 flex items-center justify-center backdrop-blur-sm">
 
                   Conocer el club
                 </Link>
@@ -79,10 +79,10 @@ export function Home() {
       </section>
 
       {/* Groups Section */}
-      <section className="pt-20 pb-10 bg-club-light relative -mt-8 rounded-t-[2.5rem] z-20">
+      <section className="pt-14 sm:pt-20 pb-10 bg-club-light relative -mt-8 rounded-t-[2.5rem] z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-club-dark mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-club-dark mb-4">
               Nuestros Clubes
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
@@ -91,7 +91,7 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5 sm:gap-8">
             {/* Aventureros Card */}
             <motion.div
               initial={{
@@ -108,13 +108,13 @@ export function Home() {
               transition={{
                 duration: 0.5
               }}
-              className="bg-white rounded-3xl p-8 shadow-soft border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
+              className="bg-white rounded-3xl p-6 sm:p-8 shadow-soft border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
 
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500" />
               <img 
                 src="/images/Aventureros.png" 
                 alt="Logo Aventureros" 
-                className="w-24 h-24 object-contain mb-4 drop-shadow-sm group-hover:scale-105 transition-transform duration-300" 
+                className="w-20 h-20 sm:w-24 sm:h-24 object-contain mb-4 drop-shadow-sm group-hover:scale-105 transition-transform duration-300" 
               />
               <h3 className="text-2xl font-bold text-slate-800 mb-3">
                 Aventureros
@@ -144,7 +144,7 @@ export function Home() {
               </ul>
               <Link
                 to="/recursos?grupo=Aventureros"
-                className="inline-flex items-center gap-2 text-club-blue font-bold hover:text-blue-800 transition-colors">
+                className="inline-flex items-center gap-2 min-h-11 -my-2 text-club-blue font-bold hover:text-blue-800 transition-colors">
 
                 Ver materiales <ArrowRight size={16} />
               </Link>
@@ -167,13 +167,13 @@ export function Home() {
                 duration: 0.5,
                 delay: 0.1
               }}
-              className="bg-white rounded-3xl p-8 shadow-soft border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
+              className="bg-white rounded-3xl p-6 sm:p-8 shadow-soft border border-slate-100 relative overflow-hidden group hover:shadow-md transition-all">
 
               <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500" />
               <img 
                 src="/images/conquistadore-logo.png" 
                 alt="Logo Conquistadores" 
-                className="w-24 h-24 object-contain mb-4 drop-shadow-sm group-hover:scale-105 transition-transform duration-300" 
+                className="w-20 h-20 sm:w-24 sm:h-24 object-contain mb-4 drop-shadow-sm group-hover:scale-105 transition-transform duration-300" 
               />
               <h3 className="text-2xl font-bold text-slate-800 mb-3">
                 Conquistadores
@@ -203,7 +203,7 @@ export function Home() {
               </ul>
               <Link
                 to="/recursos?grupo=Conquistadores"
-                className="inline-flex items-center gap-2 text-amber-600 font-bold hover:text-amber-700 transition-colors">
+                className="inline-flex items-center gap-2 min-h-11 -my-2 text-amber-700 font-bold hover:text-amber-800 transition-colors">
 
                 Ver materiales <ArrowRight size={16} />
               </Link>
@@ -213,18 +213,18 @@ export function Home() {
       </section>
 
       {/* Mission Brief */}
-      <section className="relative pt-10 pb-20 overflow-hidden bg-slate-50">
+      <section className="relative pt-6 sm:pt-10 pb-16 sm:pb-20 overflow-hidden bg-slate-50">
         {/* Decorative Blur Backgrounds */}
-        <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="hidden md:block absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="hidden md:block absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="bg-gradient-to-br from-white to-slate-50/80 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-slate-200/60 shadow-sm">
+          <div className="bg-gradient-to-br from-white to-slate-50/80 rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 border border-slate-200/60 shadow-sm">
             <div className="flex-1 space-y-6">
-              <h2 className="text-3xl font-bold text-slate-800">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">
                 Nuestra Misión
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
                 Salvar del pecado y guiar en el servicio. Trabajamos para formar
                 una generación de jóvenes comprometidos con Dios, la naturaleza
                 y su comunidad, desarrollando líderes íntegros para el futuro.
@@ -254,7 +254,7 @@ export function Home() {
               <img
                 src="/images/ClubLogo.png"
                 alt="Logo Club Emmanuel La Trinidad"
-                className="w-48 h-48 md:w-64 md:h-64 object-contain relative z-10"
+                className="w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64 object-contain relative z-10"
               />
             </div>
           </div>

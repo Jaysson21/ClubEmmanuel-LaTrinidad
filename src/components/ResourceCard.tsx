@@ -68,7 +68,7 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
         duration: 0.4,
         delay: index * 0.05
       }}
-      className="bg-white rounded-2xl p-6 shadow-soft border border-slate-100 hover:shadow-md transition-shadow duration-300 flex flex-col h-full group"
+      className="bg-white rounded-2xl p-5 sm:p-6 shadow-soft border border-slate-100 hover:shadow-md transition-shadow duration-300 flex flex-col h-full group"
     >
       {/* Header: Icon & Badges */}
       <div className="flex justify-between items-start mb-4">
@@ -92,7 +92,7 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
 
         <div className="flex flex-col gap-2 items-end">
           <span
-            className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
+            className={`text-xs font-bold uppercase tracking-wide px-2.5 py-1 rounded-full ${
               isConquistador
                 ? 'bg-club-gold/10 text-amber-700'
                 : isClubDelLibro
@@ -103,7 +103,7 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
             {resource.grupo}
           </span>
 
-          <span className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">
+          <span className="text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">
             {resource.tipo}
           </span>
         </div>
@@ -126,7 +126,7 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
           href={resource.pdfUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 bg-club-blue hover:bg-blue-800 text-white flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+          className="flex-1 bg-club-blue hover:bg-blue-800 text-white flex items-center justify-center gap-2 min-h-11 rounded-xl text-sm font-semibold active:bg-blue-800 transition-colors"
         >
           <Eye size={16} />
           <span>Ver PDF</span>
@@ -134,8 +134,9 @@ export function ResourceCard({ resource, index }: ResourceCardProps) {
 
         <button
           type="button"
-          className="p-2.5 text-slate-500 hover:text-club-blue hover:bg-blue-50 rounded-xl transition-colors border border-slate-200 hover:border-blue-100"
+          className="w-11 h-11 shrink-0 flex items-center justify-center text-slate-500 hover:text-club-blue active:bg-blue-50 hover:bg-blue-50 rounded-xl transition-colors border border-slate-200 hover:border-blue-100"
           title="Descargar"
+          aria-label={`Descargar ${resource.titulo}`}
           onClick={handleDownload}
         >
           <Download size={18} />

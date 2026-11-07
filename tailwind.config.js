@@ -1,5 +1,9 @@
 
 export default {
+  // Evita estados hover "pegados" en pantallas táctiles
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
   './index.html',
   './src/**/*.{js,ts,jsx,tsx}'

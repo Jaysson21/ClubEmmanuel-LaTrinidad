@@ -62,42 +62,44 @@ export function Recursos() {
     });
   }, [resources, searchQuery, activeGrupo, activeTipo]);
   return (
-    <div className="min-h-screen pt-28 pb-20 bg-transparent md:bg-slate-50 relative overflow-hidden">
+    <div className="min-h-dvh pt-24 md:pt-28 pb-16 md:pb-20 bg-transparent md:bg-slate-50 relative overflow-hidden">
       {/* Decorative Blur Backgrounds */}
-      <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="hidden md:block absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="hidden md:block absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="mb-10">
+        <div className="mb-6 md:mb-10">
           <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4">
             Biblioteca de Recursos
           </h1>
-          <p className="text-slate-600 text-lg max-w-2xl">
+          <p className="text-slate-600 text-base sm:text-lg max-w-2xl">
             Encuentra libros, tarjetas de clase y materiales del Club del
             Libro para el desarrollo de las actividades del club.
           </p>
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 mb-10 space-y-6">
+        <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 mb-6 md:mb-10 space-y-4 md:space-y-6">
           {/* Search Bar */}
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <Search className="h-5 w-5 text-slate-400" />
             </div>
             <input
-              type="text"
+              type="search"
+              enterKeyHint="search"
+              aria-label="Buscar recursos"
               className="block w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-club-blue/20 focus:border-club-blue transition-all"
-              placeholder="Buscar por nombre, clase o tipo de material..."
+              placeholder="Buscar por nombre o clase…"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)} />
             
           </div>
 
           {/* Filter Chips: Group */}
-          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-            <div className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mr-2 sm:w-28 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start sm:items-center">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mr-2 sm:w-28 shrink-0">
               <Filter size={16} /> Grupo:
             </div>
             <div className="flex flex-wrap gap-2">
@@ -107,7 +109,7 @@ export function Recursos() {
                 type="button"
                 aria-pressed={activeGrupo === grupo}
                 onClick={() => setActiveGrupo(grupo)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeGrupo === grupo ? 'bg-club-blue text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                className={`min-h-11 px-4 rounded-full text-sm font-medium transition-all duration-200 ${activeGrupo === grupo ? 'bg-club-blue text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
                 
                   {grupo}
                 </button>
@@ -116,8 +118,8 @@ export function Recursos() {
           </div>
 
           {/* Filter Chips: Category */}
-          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-            <div className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mr-2 sm:w-28 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start sm:items-center">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider mr-2 sm:w-28 shrink-0">
               <Filter size={16} /> Categoría:
             </div>
             <div className="flex flex-wrap gap-2">
@@ -127,7 +129,7 @@ export function Recursos() {
                 type="button"
                 aria-pressed={activeTipo === tipo}
                 onClick={() => setActiveTipo(tipo)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeTipo === tipo ? 'bg-club-gold text-club-dark shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
+                className={`min-h-11 px-4 rounded-full text-sm font-medium transition-all duration-200 ${activeTipo === tipo ? 'bg-club-gold text-club-dark shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>
 
                   {tipoLabels[tipo]}
                 </button>
@@ -138,7 +140,7 @@ export function Recursos() {
 
         {/* Results Grid */}
         {filteredResources.length > 0 ?
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             <AnimatePresence mode="popLayout">
               {filteredResources.map((resource, index) =>
             <ResourceCard
@@ -157,7 +159,7 @@ export function Recursos() {
           animate={{
             opacity: 1
           }}
-          className="bg-white rounded-2xl p-12 text-center border border-slate-100 shadow-sm flex flex-col items-center justify-center min-h-[300px]">
+          className="bg-white rounded-2xl p-8 sm:p-12 text-center border border-slate-100 shadow-sm flex flex-col items-center justify-center min-h-[300px]">
           
             <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center mb-4">
               <FileQuestion size={40} className="text-slate-400" />
@@ -175,7 +177,8 @@ export function Recursos() {
               setActiveGrupo('Todos');
               setActiveTipo('Todos');
             }}
-            className="mt-6 text-club-blue font-semibold hover:underline">
+            type="button"
+            className="mt-6 min-h-11 px-4 text-club-blue font-semibold hover:underline underline-offset-4">
             
               Limpiar filtros y búsqueda
             </button>

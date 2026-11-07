@@ -19,9 +19,9 @@ const clases: Clase[] = [
 
 export function ClasesTimeline() {
   return (
-    <div className="mt-24">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-slate-800 mb-4">Las Clases Progresivas</h2>
+    <div className="mt-16 md:mt-24">
+      <div className="text-center mb-8 md:mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4 text-balance">Las Clases Progresivas</h2>
         <p className="text-slate-600 max-w-2xl mx-auto">
           Seis niveles que acompañan el crecimiento del Conquistador, cada uno con sus propios
           requisitos y aventuras. Del Amigo al Guía.
@@ -32,7 +32,7 @@ export function ClasesTimeline() {
         {/* Línea guía en escritorio */}
         <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-club-blue/10 via-club-gold/40 to-club-blue/10" />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8 sm:gap-6">
           {clases.map((clase, index) => (
             <motion.div
               key={clase.nombre}
@@ -42,7 +42,7 @@ export function ClasesTimeline() {
               transition={{ duration: 0.4, delay: index * 0.08 }}
               className="relative flex flex-col items-center text-center group"
             >
-              <div className="w-24 h-24 rounded-full bg-white border border-slate-100 shadow-soft flex items-center justify-center overflow-hidden mb-4 group-hover:-translate-y-1.5 group-hover:shadow-md transition-all duration-300">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border border-slate-100 shadow-soft flex items-center justify-center overflow-hidden mb-4 group-hover:-translate-y-1.5 group-hover:shadow-md transition-all duration-300">
                 <img
                   src={clase.logo}
                   alt={`Clase ${clase.nombre}`}
@@ -58,10 +58,10 @@ export function ClasesTimeline() {
         </div>
       </div>
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-10 md:mt-12">
         <Link
           to="/recursos?grupo=Conquistadores"
-          className="inline-flex items-center gap-2 bg-club-blue hover:bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-sm"
+          className="inline-flex items-center justify-center gap-2 w-full sm:w-auto min-h-12 bg-club-blue hover:bg-blue-800 active:bg-blue-800 text-white px-6 rounded-xl font-semibold transition-colors shadow-sm"
         >
           Ver materiales de las clases <ArrowRight size={18} />
         </Link>

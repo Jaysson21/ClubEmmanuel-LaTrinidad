@@ -46,7 +46,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       {children}
       <div
         aria-live="polite"
-        className="fixed z-[100] flex flex-col gap-3 pointer-events-none inset-x-4 bottom-4 sm:inset-x-auto sm:right-6 sm:top-6 sm:bottom-auto sm:w-96"
+        className="fixed z-[100] flex flex-col gap-3 pointer-events-none inset-x-4 bottom-[max(1rem,env(safe-area-inset-bottom))] sm:inset-x-auto sm:right-6 sm:top-6 sm:bottom-auto sm:w-96"
       >
         <AnimatePresence initial={false}>
           {toasts.map((toast) => (
@@ -68,7 +68,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
                 type="button"
                 onClick={() => remove(toast.id)}
                 aria-label="Cerrar notificación"
-                className="shrink-0 p-1 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition-colors"
+                className="shrink-0 -my-2 -mr-1 w-10 h-10 flex items-center justify-center text-slate-500 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition-colors"
               >
                 <X size={16} />
               </button>

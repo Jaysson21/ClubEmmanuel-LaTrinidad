@@ -10,12 +10,21 @@ export function Navbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen]);
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const navLinks = [
@@ -43,7 +52,7 @@ export function Navbar() {
   const isActive = (path: string) => location.pathname === path;
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-white/70 backdrop-blur-md py-5'}`}>
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2 md:py-3' : 'bg-white/70 backdrop-blur-md py-3 md:py-5'}`}>
       
       {/* Top Colorful Border */}
       <div className="absolute top-0 left-0 right-0 h-1.5 bg-club-blue" />
@@ -68,7 +77,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) =>
             <Link
               key={link.path}
@@ -100,9 +109,12 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-slate-600 hover:text-club-blue hover:bg-slate-100 rounded-lg transition-colors"
+            type="button"
+            className="lg:hidden -mr-2 w-11 h-11 flex items-center justify-center text-slate-600 hover:text-club-blue hover:bg-slate-100 active:bg-slate-100 rounded-xl transition-colors"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu">
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}>
             
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -129,14 +141,16 @@ export function Navbar() {
             duration: 0.3,
             ease: 'easeInOut'
           }}
-          className="md:hidden overflow-hidden bg-white border-t border-slate-100">
+          id="mobile-menu"
+          className="lg:hidden overflow-hidden bg-white border-t border-slate-100">
           
             <div className="px-4 pt-2 pb-6 space-y-1 shadow-lg">
               {navLinks.map((link) =>
             <Link
               key={link.path}
               to={link.path}
-              className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${isActive(link.path) ? 'bg-blue-50 text-club-blue' : 'text-slate-600 hover:bg-slate-50 hover:text-club-blue'}`}>
+              className={`flex items-center min-h-12 px-4 rounded-xl text-base font-medium transition-colors ${isActive(link.path) ? 'bg-blue-50 text-club-blue' : 'text-slate-600 hover:bg-slate-50 hover:text-club-blue active:bg-slate-50'}`}
+              aria-current={isActive(link.path) ? 'page' : undefined}>
               
                   {link.name}
                 </Link>
@@ -144,7 +158,7 @@ export function Navbar() {
               <div className="pt-4 px-4">
                 <Link
                 to="/recursos"
-                className="block w-full text-center bg-club-blue text-white px-5 py-3 rounded-xl font-semibold shadow-sm">
+                className="flex items-center justify-center w-full min-h-12 bg-club-blue active:bg-blue-800 text-white px-5 rounded-xl font-semibold shadow-sm">
                 
                   Ver Biblioteca
                 </Link>

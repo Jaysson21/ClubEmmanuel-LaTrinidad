@@ -45,12 +45,12 @@ export function Emblema() {
   const colorActivo = colores.find((c) => c.id === activo);
 
   const base =
-    'flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold border transition-all';
+    'flex items-center gap-2 min-h-11 px-4 rounded-xl text-sm font-semibold border transition-all';
 
   return (
-    <div className="mt-24">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-slate-800 mb-4">El Emblema y su Significado</h2>
+    <div className="mt-16 md:mt-24">
+      <div className="text-center mb-8 md:mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4 text-balance">El Emblema y su Significado</h2>
         <p className="text-slate-600 max-w-2xl mx-auto">
           Cada parte del emblema del Conquistador cuenta parte de nuestra identidad. Toca cada
           elemento para descubrir lo que representa.
@@ -59,11 +59,11 @@ export function Emblema() {
 
       <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden max-w-4xl mx-auto flex flex-col md:flex-row">
         {/* Emblema visual */}
-        <div className="w-full md:w-1/2 bg-gradient-to-br from-club-blue to-blue-900 p-8 md:p-10 flex items-center justify-center">
+        <div className="w-full md:w-1/2 bg-gradient-to-br from-club-blue to-blue-900 p-6 sm:p-8 md:p-10 flex items-center justify-center">
           <motion.img
             src="/images/conquistadore-logo.png"
             alt="Emblema del Club de Conquistadores"
-            className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-xl"
+            className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-contain drop-shadow-xl"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -72,11 +72,13 @@ export function Emblema() {
         </div>
 
         {/* Panel interactivo */}
-        <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col">
+        <div className="w-full md:w-1/2 p-5 sm:p-8 md:p-10 flex flex-col">
           <div className="flex flex-wrap gap-2 mb-4">
             {elementos.map((el) => (
               <button
                 key={el.id}
+                type="button"
+                aria-pressed={activo === el.id}
                 onClick={() => setActivo(el.id)}
                 className={`${base} ${
                   activo === el.id
@@ -97,7 +99,9 @@ export function Emblema() {
                 key={c.id}
                 onClick={() => setActivo(c.id)}
                 aria-label={`Color ${c.label}`}
-                className={`w-9 h-9 rounded-full border-2 transition-all ${
+                type="button"
+                aria-pressed={activo === c.id}
+                className={`w-11 h-11 rounded-full border-2 transition-all ${
                   activo === c.id ? 'ring-2 ring-offset-2 ring-club-gold scale-110' : 'border-slate-200 hover:scale-105'
                 }`}
                 style={{ backgroundColor: c.swatch }}
@@ -105,7 +109,7 @@ export function Emblema() {
             ))}
           </div>
 
-          <div className="flex-grow min-h-[140px] bg-slate-50 rounded-2xl p-6 flex items-center">
+          <div className="flex-grow min-h-[140px] bg-slate-50 rounded-2xl p-5 sm:p-6 flex items-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activo}

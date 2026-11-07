@@ -116,14 +116,14 @@ export function Acerca() {
   const [activeTab, setActiveTab] = useState(ideales[0].id);
 
   return (
-    <div className="min-h-screen pt-28 pb-20 bg-transparent md:bg-slate-50 relative overflow-hidden">
+    <div className="min-h-dvh pt-24 md:pt-28 pb-16 md:pb-20 bg-transparent md:bg-slate-50 relative overflow-hidden">
       {/* Decorative Blur Backgrounds */}
-      <div className="absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="hidden md:block absolute top-0 -left-40 w-[40rem] h-[40rem] bg-club-blue/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="hidden md:block absolute bottom-0 -right-40 w-[40rem] h-[40rem] bg-club-gold/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <motion.div
             initial={{
               opacity: 0,
@@ -137,10 +137,10 @@ export function Acerca() {
               duration: 0.5
             }}>
             
-            <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 mb-4 sm:mb-6 text-balance">
               Quiénes somos
             </h1>
-            <p className="text-lg text-slate-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               El Club Emmanuel de La Trinidad es parte de una organización
               mundial patrocinada por la Iglesia Adventista del Séptimo Día,
               dedicada al desarrollo integral de niños y jóvenes.
@@ -149,7 +149,7 @@ export function Acerca() {
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-8 mb-16 md:mb-20">
           <motion.div
             initial={{
               opacity: 0,
@@ -163,13 +163,13 @@ export function Acerca() {
               duration: 0.5,
               delay: 0.2
             }}
-            className="bg-gradient-to-br from-blue-50/80 to-white p-8 rounded-3xl shadow-sm border border-blue-100/50 flex gap-6 group hover:shadow-md transition-shadow duration-300">
+            className="bg-gradient-to-br from-blue-50/80 to-white p-6 sm:p-8 rounded-3xl shadow-sm border border-blue-100/50 flex flex-col sm:flex-row gap-4 sm:gap-6 group hover:shadow-md transition-shadow duration-300">
             
             <div className="w-14 h-14 shrink-0 bg-blue-50 text-club-blue rounded-2xl flex items-center justify-center">
               <Target size={28} strokeWidth={2} />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-slate-800 mb-3">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3">
                 Nuestra Misión
               </h2>
               <p className="text-slate-600 leading-relaxed">
@@ -193,13 +193,13 @@ export function Acerca() {
               duration: 0.5,
               delay: 0.3
             }}
-            className="bg-gradient-to-br from-amber-50/80 to-white p-8 rounded-3xl shadow-sm border border-amber-100/50 flex gap-6 group hover:shadow-md transition-shadow duration-300">
+            className="bg-gradient-to-br from-amber-50/80 to-white p-6 sm:p-8 rounded-3xl shadow-sm border border-amber-100/50 flex flex-col sm:flex-row gap-4 sm:gap-6 group hover:shadow-md transition-shadow duration-300">
             
             <div className="w-14 h-14 shrink-0 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center">
               <Eye size={28} strokeWidth={2} />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-slate-800 mb-3">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3">
                 Nuestra Visión
               </h2>
               <p className="text-slate-600 leading-relaxed">
@@ -213,8 +213,8 @@ export function Acerca() {
 
         {/* Values */}
         <div>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">
               Nuestros Valores
             </h2>
             <p className="text-slate-600">
@@ -222,7 +222,7 @@ export function Acerca() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-center">
             {values.map((value, index) =>
             <motion.div
               key={value.title}
@@ -260,9 +260,9 @@ export function Acerca() {
         </div>
 
         {/* Ideals Section */}
-        <div className="mt-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">
+        <div className="mt-16 md:mt-24">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">
               Nuestros Ideales
             </h2>
             <p className="text-slate-600">
@@ -276,8 +276,10 @@ export function Acerca() {
               {ideales.map((ideal) => (
                 <button
                   key={ideal.id}
+                  type="button"
+                  aria-pressed={activeTab === ideal.id}
                   onClick={() => setActiveTab(ideal.id)}
-                  className={`flex flex-col md:flex-row items-center justify-center md:justify-start gap-1.5 md:gap-3 w-[calc(50%-0.25rem)] sm:w-[calc(33.33%-0.33rem)] md:w-full text-center md:text-left px-2 py-3 md:px-4 md:py-3.5 rounded-xl transition-all ${
+                  className={`flex flex-col md:flex-row items-center justify-center md:justify-start gap-1.5 md:gap-3 w-[calc(50%-0.25rem)] sm:w-[calc(33.33%-0.33rem)] md:w-full text-center md:text-left min-h-14 px-2 py-2.5 md:px-4 md:py-3.5 rounded-xl transition-all ${
                     activeTab === ideal.id
                       ? 'bg-club-blue text-white shadow-md'
                       : 'text-slate-600 bg-white md:bg-transparent border border-slate-200 md:border-transparent hover:bg-slate-200/50 hover:text-slate-900'
@@ -286,7 +288,7 @@ export function Acerca() {
                   <span className={`${activeTab === ideal.id ? 'text-white' : 'text-slate-400'}`}>
                     {ideal.icon}
                   </span>
-                  <span className="font-semibold text-[11px] sm:text-xs md:text-base leading-tight">
+                  <span className="font-semibold text-sm md:text-base leading-tight">
                     {ideal.title}
                   </span>
                 </button>
@@ -294,7 +296,7 @@ export function Acerca() {
             </div>
 
             {/* Tab Content */}
-            <div className="w-full md:w-2/3 p-8 md:p-12 min-h-[300px] flex items-center bg-gradient-to-br from-white to-slate-50/50">
+            <div className="w-full md:w-2/3 p-5 sm:p-8 md:p-12 min-h-[260px] md:min-h-[300px] flex items-center bg-gradient-to-br from-white to-slate-50/50">
               <AnimatePresence mode="wait">
                 {ideales.map((ideal) =>
                   activeTab === ideal.id ? (
@@ -306,11 +308,11 @@ export function Acerca() {
                       transition={{ duration: 0.3 }}
                       className="w-full"
                     >
-                      <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4 sm:mb-6 flex items-center gap-3">
                         <span className="text-club-blue">{ideal.icon}</span>
                         {ideal.title}
                       </h3>
-                      <div className="text-lg text-slate-700 italic border-l-4 border-club-gold pl-6 py-2">
+                      <div className="text-base sm:text-lg text-slate-700 italic border-l-4 border-club-gold pl-4 sm:pl-6 py-2">
                         {ideal.content}
                       </div>
                     </motion.div>
